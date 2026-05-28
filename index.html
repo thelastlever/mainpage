@@ -754,8 +754,110 @@
     .fc-visual { aspect-ratio: 16 / 10; }
   }
 
+  /* ============ PILLARS ============ */
+  .pillars { position: relative; }
+  .pillars-top {
+    background: var(--indigo);
+    padding: var(--pad-y) 0 0;
+    text-align: center;
+  }
+  .pillars-top h2 { color: var(--white); max-width: 22ch; margin: 0 auto 16px; }
+  .pillars-top .sub { color: var(--peri); max-width: 52ch; margin: 0 auto; font-size: clamp(15px, 1.4vw, 18px); }
+  .pillars-bottom {
+    background: var(--white);
+    padding: 0;
+  }
+  .pillars-cards-wrap {
+    position: relative;
+    padding-bottom: clamp(24px, 3vw, 36px);
+  }
+  /* Hard colour split — solid indigo top half */
+  .pillars-cards-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: var(--split-h, 50%);
+    background: var(--indigo);
+    z-index: 0;
+  }
+  .pillars-track-outer {
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: visible;
+    padding: clamp(40px, 5vw, 64px) var(--pad-x) clamp(24px, 3vw, 40px);
+    max-width: var(--max);
+    margin: 0 auto;
+  }
+  .pillars-track {
+    display: flex;
+    gap: 16px;
+    transition: transform 0.4s ease;
+  }
+  .pillar-card {
+    background: var(--white);
+    border: 1px solid var(--indigo-10);
+    border-radius: 16px;
+    padding: clamp(24px, 3vw, 32px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 4px 12px rgba(45,42,110,0.06), 0 8px 20px rgba(45,42,110,0.05);
+    flex: 0 0 calc(21.25% - 12px);
+    min-width: 200px;
+  }
+  @media (max-width: 900px) { .pillar-card { flex: 0 0 calc(42.5% - 8px); } }
+  @media (max-width: 520px) { .pillar-card { flex: 0 0 75%; } }
+  .pillar-icon {
+    width: 36px;
+    height: 36px;
+    background: none;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--indigo);
+  }
+  .pillar-icon svg { width: 28px; height: 28px; stroke-width: 1.4; }
+  .pillar-card h3 {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700;
+    font-size: clamp(20px, 1.8vw, 26px);
+    color: var(--indigo);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin: 0;
+  }
+  .pillar-card p {
+    font-size: clamp(14px, 1.1vw, 15px);
+    color: var(--gray);
+    line-height: 1.65;
+    margin: 0;
+  }
+  .pillars-nav {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+  .pillars-btn {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--indigo-20);
+    background: var(--white);
+    color: var(--indigo);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    transition: background .18s, border-color .18s;
+  }
+  .pillars-btn:hover { background: var(--indigo); color: var(--white); border-color: var(--indigo); }
+  .pillars-btn svg { width: 16px; height: 16px; }
+
   /* ============ PROFIT QUOTE ============ */
-  .profit-quote-section { text-align: center; padding: clamp(32px, 4vw, 52px) 0; }
+  .profit-quote-section { text-align: center; padding: calc(var(--pad-y) / 4) 0 var(--pad-y); }
   .profit-quote-headline { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: clamp(26px, 3.5vw, 42px); line-height: 1.2; letter-spacing: -0.02em; color: var(--indigo); margin: 0 0 8px; }
   .profit-quote-headline span { color: #7F87E8; }
   .profit-quote-sub { font-size: clamp(15px, 1.4vw, 18px); color: var(--gray); margin: 0 0 2rem; }
@@ -982,6 +1084,60 @@
     </div>
   </section>
 
+  <!-- ============ PILLARS ============ -->
+  <section class="pillars">
+    <div class="pillars-top">
+      <div class="container">
+        <h2>For brands that are done leaving profit behind.</h2>
+        <p class="lead sub">We don't use one framework or one playbook. We build around your brand so every decision moves your bottom line.</p>
+      </div>
+    </div>
+    <div class="pillars-bottom">
+      <div class="pillars-cards-wrap">
+        <div class="pillars-track-outer">
+          <div class="pillars-track" id="pillarsTrack">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg>
+              </div>
+              <h3>Profit-First Optimisation</h3>
+              <p>Every test we run is filtered through one question: does this improve the bottom line? Not clicks, not sessions. Profit.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              </div>
+              <h3>Tailored to Your Business</h3>
+              <p>We start with a full audit of your store, identify the highest-impact opportunities, then build a plan around what your business actually needs. No two brands get the same playbook.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h2l2 5 2-7 2 5h2"/></svg>
+              </div>
+              <h3>Methodical A/B Testing</h3>
+              <p>Structured, high-velocity testing with a 60% win rate. Winners stay live and compound. Every iteration builds on the last.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <h3>Brand-Led Conversion</h3>
+              <p>CRO that strengthens your brand, not cheapens it. We sharpen the story your site tells until every visitor knows why they should buy.</p>
+            </div>
+          </div>
+        </div>
+        <div class="pillars-nav">
+          <button class="pillars-btn" id="pillarsPrev" aria-label="Previous">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="pillars-btn" id="pillarsNext" aria-label="Next">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ PROFIT QUOTE ============ -->
   <section class="profit-quote-section">
     <div class="container">
@@ -1032,36 +1188,32 @@
         <div class="carousel-track" id="testiTrack" tabindex="0" role="group" aria-label="Client testimonials, scroll horizontally to see more">
         <article class="testi-card">
           <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_11.56.34_am.png?v=1779762693&width=3840" alt="Knit and Carry results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
-          <p class="testi-quote">"32% revenue increase in 3 months from 60% of tests winning."</p>
+          <p class="testi-quote">"18% profit increase in 3 months. No extra ad spend, just smarter conversion."</p>
           <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Knit and Carry logo">KC</div>
             <div class="author-info"><strong>Finn M.</strong><span>CEO, Knit and Carry</span></div>
           </div>
         </article>
 
         <article class="testi-card">
           <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.03.49_pm.png?v=1779762840&width=3840" alt="Lucky Bear & Co results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
-          <p class="testi-quote">"$70K extra per month in 6 weeks. Close to $1M a year. Unbelievable."</p>
+          <p class="testi-quote">"$27.3K extra profit per month after 3 months. $37.5K after 6. Product-specific landing pages with persona targeting changed everything."</p>
           <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Lucky Bear & Co logo">LB</div>
             <div class="author-info"><strong>Zaq Q.</strong><span>Founder, Lucky Bear & Co</span></div>
           </div>
         </article>
 
         <article class="testi-card">
           <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.05.16_pm.png?v=1779762929&width=3840" alt="Auxx-Lift results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
-          <p class="testi-quote">"A detailed yet simple plan. A few months in and we have 30%+ revenue growth."</p>
+          <p class="testi-quote">"22% profit increase from day one, 5 months in. Persona-focused landing pages and disciplined testing — exactly what we needed."</p>
           <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Auxx-Lift logo">AL</div>
             <div class="author-info"><strong>Sean O.</strong><span>MD, Auxx-Lift</span></div>
           </div>
         </article>
 
         <article class="testi-card">
           <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.07.33_pm.png?v=1779763064&width=3840" alt="Baby Knits results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
-          <p class="testi-quote">"Almost twice the profit we were making before. Highest-ROI investment we've ever made."</p>
+          <p class="testi-quote">"They came in, did a full audit, found our weak points, and had new tests live within a week. The speed and clarity was unlike anything we'd experienced before."</p>
           <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Baby Knits logo">BK</div>
             <div class="author-info"><strong>Edward M.</strong><span>Founder, Baby Knits</span></div>
           </div>
         </article>
@@ -1070,7 +1222,6 @@
           <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.08.40_pm.png?v=1779763134&width=3840" alt="Underbrush Gum results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
           <p class="testi-quote">"Our monthly profit jumped 28% in two months. Same traffic, same ad budget."</p>
           <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Underbrush Gum logo">UG</div>
             <div class="author-info"><strong>Grace N.</strong><span>Founder, Underbrush Gum</span></div>
           </div>
         </article>
@@ -1079,7 +1230,6 @@
           <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.10.15_pm.png?v=1779763232&width=3840" alt="Essential Sleep Hacks results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
           <p class="testi-quote">"An extra $45K in monthly profit at $6M a year. The math made the decision easy."</p>
           <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Essential Sleep Hacks logo">ES</div>
             <div class="author-info"><strong>Marcus L.</strong><span>CEO, Essential Sleep Hacks</span></div>
           </div>
         </article>
@@ -1088,7 +1238,6 @@
           <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.11.09_pm.png?v=1779763277&width=3840" alt="Spotminders results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
           <p class="testi-quote">"24% to the bottom line in one quarter. We didn't touch our ad spend once."</p>
           <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Spotminders logo">SM</div>
             <div class="author-info"><strong>Dana R.</strong><span>Co-founder, Spotminders</span></div>
           </div>
         </article>
@@ -1097,7 +1246,6 @@
           <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.13.51_pm.png?v=1779763444&width=3840" alt="HaloSphere results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
           <p class="testi-quote">"We went from scraping by to genuinely profitable at $4M a year. Game changer."</p>
           <div class="testi-author">
-            <div class="avatar" role="img" aria-label="HaloSphere logo">HS</div>
             <div class="author-info"><strong>Theo W.</strong><span>Founder, HaloSphere</span></div>
           </div>
         </article>
@@ -1268,7 +1416,7 @@
     <div class="container">
       <p class="eyebrow on-indigo">Ready?</p>
       <h2>Have we convinced you? Let us do the same for your brand.</h2>
-      <p class="sub">Book a free 30-minute strategy session. No fluff, just a clear plan.</p>
+      <p class="sub">Book a free 45-minute strategy session. No fluff, just a clear plan.</p>
       <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-inverse">Talk to us <span class="arr" aria-hidden="true">→</span></a>
     </div>
   </section>
@@ -1306,6 +1454,46 @@
           if (target) target.classList.add('open');
         }
       });
+    });
+  })();
+
+  // ============ PILLARS COLOUR SPLIT ============
+  (function () {
+    function setSplit() {
+      var wrap = document.querySelector('.pillars-cards-wrap');
+      var card = document.querySelector('.pillar-card');
+      if (!wrap || !card) return;
+      var cardHeight = card.offsetHeight;
+      var trackTop = card.getBoundingClientRect().top - wrap.getBoundingClientRect().top;
+      var splitPx = trackTop + (cardHeight / 2);
+      wrap.style.setProperty('--split-h', splitPx + 'px');
+    }
+    window.addEventListener('load', setSplit);
+    window.addEventListener('resize', setSplit);
+  })();
+
+  // ============ PILLARS CAROUSEL ============
+  (function () {
+    var track = document.getElementById('pillarsTrack');
+    var prev = document.getElementById('pillarsPrev');
+    var next = document.getElementById('pillarsNext');
+    if (!track || !prev || !next) return;
+    var idx = 0;
+    function cardWidth() {
+      var card = track.querySelector('.pillar-card');
+      return card ? card.offsetWidth + 16 : 260;
+    }
+    function update() {
+      track.style.transform = 'translateX(-' + (idx * cardWidth()) + 'px)';
+    }
+    next.addEventListener('click', function () {
+      var max = track.querySelectorAll('.pillar-card').length - 1;
+      idx = Math.min(idx + 1, max);
+      update();
+    });
+    prev.addEventListener('click', function () {
+      idx = Math.max(idx - 1, 0);
+      update();
     });
   })();
 
