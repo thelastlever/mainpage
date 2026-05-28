@@ -89,7 +89,7 @@
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--gray);
+    color: var(--indigo);
     margin: 0 0 20px;
     display: inline-block;
   }
@@ -754,6 +754,13 @@
     .fc-visual { aspect-ratio: 16 / 10; }
   }
 
+  /* ============ PROFIT QUOTE ============ */
+  .profit-quote-section { text-align: center; padding: clamp(32px, 4vw, 52px) 0; }
+  .profit-quote-headline { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: clamp(26px, 3.5vw, 42px); line-height: 1.2; letter-spacing: -0.02em; color: var(--indigo); margin: 0 0 8px; }
+  .profit-quote-headline span { color: #7F87E8; }
+  .profit-quote-sub { font-size: clamp(15px, 1.4vw, 18px); color: var(--gray); margin: 0 0 2rem; }
+  .profit-quote-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
   /* ============ ELIGIBILITY BANNER ============ */
   .eligibility {
     padding: clamp(28px, 4vw, 44px) 0;
@@ -856,7 +863,7 @@
   .final-cta {
     background: var(--indigo);
     color: var(--white);
-    padding: clamp(80px, 11vw, 140px) 0;
+    padding: clamp(48px, 6vw, 80px) 0;
   }
   .final-cta h2 { color: var(--white); max-width: 22ch; }
   .final-cta .sub {
@@ -975,141 +982,14 @@
     </div>
   </section>
 
-  <!-- ============ WHO WE ARE ============ -->
-  <section id="about" class="tinted">
+  <!-- ============ PROFIT QUOTE ============ -->
+  <section class="profit-quote-section">
     <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Who we are / 01</p>
-        <h2>Run by an eight-figure ecom founder.</h2>
-        <p class="lead sub">Not another agency with no hands-on experience.</p>
-      </div>
-
-      <div class="who-grid">
-        <div>
-          <div class="founder-photo" role="img" aria-label="Portrait of Peter, co-founder">Peter</div>
-          <p class="founder-name" style="margin-top:24px;">Peter</p>
-          <p class="founder-role">Co-founder</p>
-          <p class="founder-quote">"I built Ozzi Gear past $2M/month in under three years. No matter how much I spent on ads, they stopped moving the needle. The thing I'd neglected most was optimising my own conversion. That's what unlocked the next level of scale, and it's what we now do for other brands."</p>
-        </div>
-        <div>
-          <div class="founder-photo" role="img" aria-label="Portrait of Nick, co-founder">Nick</div>
-          <p class="founder-name" style="margin-top:24px;">Nick</p>
-          <p class="founder-role">Co-founder</p>
-          <p class="founder-quote">"In my time as Head of Marketing, I learned one thing for sure: a budget increase is never enough. CRO is the lever every brand underestimates, even though it's the one that moves the needle the most."</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CLIENT RESULTS ============ -->
-  <section id="results">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Client results / 02</p>
-        <h2>Become our next success story.</h2>
-      </div>
-
-      <div class="carousel">
-        <div class="carousel-track" id="testiTrack" tabindex="0" role="group" aria-label="Client testimonials, scroll horizontally to see more">
-        <article class="testi-card">
-          <div class="testi-chart" role="img" aria-label="Dashboard chart showing 32% revenue increase">Dashboard</div>
-          <p class="testi-quote">"32% revenue increase in 3 months from 60% of tests winning."</p>
-          <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Hugger Comfort logo">HC</div>
-            <div class="author-info"><strong>Finn M.</strong><span>CEO, Hugger Comfort</span></div>
-          </div>
-        </article>
-
-        <article class="testi-card">
-          <div class="testi-chart" role="img" aria-label="Dashboard chart showing $70K extra per month">Dashboard</div>
-          <p class="testi-quote">"$70K extra per month in 6 weeks. Close to $1M a year. Unbelievable."</p>
-          <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Playa London logo">PL</div>
-            <div class="author-info"><strong>Zaq Q.</strong><span>Founder, Playa London</span></div>
-          </div>
-        </article>
-
-        <article class="testi-card">
-          <div class="testi-chart" role="img" aria-label="Dashboard chart showing 30%+ revenue growth">Dashboard</div>
-          <p class="testi-quote">"A detailed yet simple plan. A few months in and we have 30%+ revenue growth."</p>
-          <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Galway Crystal logo">GC</div>
-            <div class="author-info"><strong>Sean O.</strong><span>MD, Galway Crystal</span></div>
-          </div>
-        </article>
-
-        <article class="testi-card">
-          <div class="testi-chart" role="img" aria-label="Dashboard chart showing nearly doubled profit">Dashboard</div>
-          <p class="testi-quote">"Almost twice the profit we were making before. Highest-ROI investment we've ever made."</p>
-          <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Uviva logo">UV</div>
-            <div class="author-info"><strong>Edward M.</strong><span>Founder, Uviva</span></div>
-          </div>
-        </article>
-
-        <article class="testi-card">
-          <div class="testi-chart" role="img" aria-label="Dashboard chart showing 28% profit increase">Dashboard</div>
-          <p class="testi-quote">"Our monthly profit jumped 28% in two months. Same traffic, same ad budget."</p>
-          <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Verdana Oil Co. logo">VO</div>
-            <div class="author-info"><strong>Grace N.</strong><span>Founder, Verdana Oil Co.</span></div>
-          </div>
-        </article>
-
-        <article class="testi-card">
-          <div class="testi-chart" role="img" aria-label="Dashboard chart showing $45K extra profit per month">Dashboard</div>
-          <p class="testi-quote">"An extra $45K in monthly profit at $6M a year. The math made the decision easy."</p>
-          <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Pebble & Pine logo">PP</div>
-            <div class="author-info"><strong>Marcus L.</strong><span>CEO, Pebble &amp; Pine</span></div>
-          </div>
-        </article>
-
-        <article class="testi-card">
-          <div class="testi-chart" role="img" aria-label="Dashboard chart showing 24% bottom line growth">Dashboard</div>
-          <p class="testi-quote">"24% to the bottom line in one quarter. We didn't touch our ad spend once."</p>
-          <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Halcyon Pet logo">HP</div>
-            <div class="author-info"><strong>Dana R.</strong><span>Co-founder, Halcyon Pet</span></div>
-          </div>
-        </article>
-
-        <article class="testi-card">
-          <div class="testi-chart" role="img" aria-label="Dashboard chart showing profit margin improvement">Dashboard</div>
-          <p class="testi-quote">"We went from scraping by to genuinely profitable at $4M a year. Game changer."</p>
-          <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Driftwell Home logo">DH</div>
-            <div class="author-info"><strong>Theo W.</strong><span>Founder, Driftwell Home</span></div>
-          </div>
-        </article>
-
-        <article class="testi-card">
-          <div class="testi-chart" role="img" aria-label="Dashboard chart showing 30% profit lift">Dashboard</div>
-          <p class="testi-quote">"30% more profit per order, no extra acquisition cost. Wish we'd found them sooner."</p>
-          <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Lumira Skin logo">LS</div>
-            <div class="author-info"><strong>Priya S.</strong><span>Founder, Lumira Skin</span></div>
-          </div>
-        </article>
-
-        <article class="testi-card">
-          <div class="testi-chart" role="img" aria-label="Dashboard chart showing doubled contribution margin">Dashboard</div>
-          <p class="testi-quote">"Our contribution margin nearly doubled. Best decision we made all year."</p>
-          <div class="testi-author">
-            <div class="avatar" role="img" aria-label="Northbrook Goods logo">NG</div>
-            <div class="author-info"><strong>Jonah K.</strong><span>CEO, Northbrook Goods</span></div>
-          </div>
-        </article>
-        </div>
-
-        <div class="carousel-nav">
-          <button class="carousel-btn" id="testiPrev" type="button" aria-label="Previous testimonials">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
-          </button>
-          <button class="carousel-btn" id="testiNext" type="button" aria-label="Next testimonials">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
-          </button>
-        </div>
+      <h2 class="profit-quote-headline">Revenue looks good on your dashboard.<br><span>Profit looks good in your wallet.</span></h2>
+      <p class="profit-quote-sub">Find out exactly how much profit you're leaving on the table.</p>
+      <div class="profit-quote-btns">
+        <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary">Talk to us <span class="arr" aria-hidden="true">→</span></a>
+        <a href="#upside" class="btn btn-secondary">Calculate your potential <span class="arr" aria-hidden="true">↓</span></a>
       </div>
     </div>
   </section>
@@ -1118,7 +998,7 @@
   <section id="upside" class="tinted">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">Your upside / 03</p>
+        <p class="eyebrow">Your upside</p>
         <h2>Find out how much profit you could add.</h2>
       </div>
 
@@ -1140,11 +1020,107 @@
     </div>
   </section>
 
+  <!-- ============ CLIENT RESULTS ============ -->
+  <section id="results">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Client results</p>
+        <h2>Become our next success story.</h2>
+      </div>
+
+      <div class="carousel">
+        <div class="carousel-track" id="testiTrack" tabindex="0" role="group" aria-label="Client testimonials, scroll horizontally to see more">
+        <article class="testi-card">
+          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_11.56.34_am.png?v=1779762693&width=3840" alt="Knit and Carry results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
+          <p class="testi-quote">"32% revenue increase in 3 months from 60% of tests winning."</p>
+          <div class="testi-author">
+            <div class="avatar" role="img" aria-label="Knit and Carry logo">KC</div>
+            <div class="author-info"><strong>Finn M.</strong><span>CEO, Knit and Carry</span></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.03.49_pm.png?v=1779762840&width=3840" alt="Lucky Bear & Co results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
+          <p class="testi-quote">"$70K extra per month in 6 weeks. Close to $1M a year. Unbelievable."</p>
+          <div class="testi-author">
+            <div class="avatar" role="img" aria-label="Lucky Bear & Co logo">LB</div>
+            <div class="author-info"><strong>Zaq Q.</strong><span>Founder, Lucky Bear & Co</span></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.05.16_pm.png?v=1779762929&width=3840" alt="Auxx-Lift results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
+          <p class="testi-quote">"A detailed yet simple plan. A few months in and we have 30%+ revenue growth."</p>
+          <div class="testi-author">
+            <div class="avatar" role="img" aria-label="Auxx-Lift logo">AL</div>
+            <div class="author-info"><strong>Sean O.</strong><span>MD, Auxx-Lift</span></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.07.33_pm.png?v=1779763064&width=3840" alt="Baby Knits results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
+          <p class="testi-quote">"Almost twice the profit we were making before. Highest-ROI investment we've ever made."</p>
+          <div class="testi-author">
+            <div class="avatar" role="img" aria-label="Baby Knits logo">BK</div>
+            <div class="author-info"><strong>Edward M.</strong><span>Founder, Baby Knits</span></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.08.40_pm.png?v=1779763134&width=3840" alt="Underbrush Gum results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
+          <p class="testi-quote">"Our monthly profit jumped 28% in two months. Same traffic, same ad budget."</p>
+          <div class="testi-author">
+            <div class="avatar" role="img" aria-label="Underbrush Gum logo">UG</div>
+            <div class="author-info"><strong>Grace N.</strong><span>Founder, Underbrush Gum</span></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.10.15_pm.png?v=1779763232&width=3840" alt="Essential Sleep Hacks results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
+          <p class="testi-quote">"An extra $45K in monthly profit at $6M a year. The math made the decision easy."</p>
+          <div class="testi-author">
+            <div class="avatar" role="img" aria-label="Essential Sleep Hacks logo">ES</div>
+            <div class="author-info"><strong>Marcus L.</strong><span>CEO, Essential Sleep Hacks</span></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.11.09_pm.png?v=1779763277&width=3840" alt="Spotminders results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
+          <p class="testi-quote">"24% to the bottom line in one quarter. We didn't touch our ad spend once."</p>
+          <div class="testi-author">
+            <div class="avatar" role="img" aria-label="Spotminders logo">SM</div>
+            <div class="author-info"><strong>Dana R.</strong><span>Co-founder, Spotminders</span></div>
+          </div>
+        </article>
+
+        <article class="testi-card">
+          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.13.51_pm.png?v=1779763444&width=3840" alt="HaloSphere results" style="width:100%;border-radius:8px;aspect-ratio:16/7;object-fit:cover;">
+          <p class="testi-quote">"We went from scraping by to genuinely profitable at $4M a year. Game changer."</p>
+          <div class="testi-author">
+            <div class="avatar" role="img" aria-label="HaloSphere logo">HS</div>
+            <div class="author-info"><strong>Theo W.</strong><span>Founder, HaloSphere</span></div>
+          </div>
+        </article>
+
+        </div>
+
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="testiPrev" type="button" aria-label="Previous testimonials">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="carousel-btn" id="testiNext" type="button" aria-label="Next testimonials">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ THE NUMBERS ============ -->
   <section id="numbers">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">The numbers / 04</p>
+        <p class="eyebrow">The numbers</p>
         <h2>Scaling ads brings revenue. We bring you profit.</h2>
       </div>
 
@@ -1211,7 +1187,7 @@
   <section id="faq" class="tinted">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">FAQ / 05</p>
+        <p class="eyebrow">FAQ</p>
         <h2>Things we used to wonder too.</h2>
         <p class="lead sub">Peter's been on the other side of this decision. These are the real questions.</p>
       </div>
@@ -1290,7 +1266,7 @@
   <!-- ============ FINAL CTA ============ -->
   <section class="final-cta" id="contact">
     <div class="container">
-      <p class="eyebrow on-indigo">Ready? / 06</p>
+      <p class="eyebrow on-indigo">Ready?</p>
       <h2>Have we convinced you? Let us do the same for your brand.</h2>
       <p class="sub">Book a free 30-minute strategy session. No fluff, just a clear plan.</p>
       <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-inverse">Talk to us <span class="arr" aria-hidden="true">→</span></a>
