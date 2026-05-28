@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -523,6 +524,7 @@
     border-radius: 2px;
     outline: none;
     margin: 8px 0 36px;
+    touch-action: pan-x;
   }
   .calc-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -715,7 +717,9 @@
     margin-top: 8px;
   }
   @media (max-width: 600px) {
-    .fc-stats { grid-template-columns: 1fr 1fr; }
+    .fc-stats { grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 20px 16px; }
+    .fc-stat-num { font-size: clamp(18px, 5vw, 26px); }
+    .fc-stat-label { font-size: 9px; }
   }
   .fc-stat-num {
     font-family: 'Inter Tight', sans-serif;
@@ -1083,7 +1087,7 @@
             </div>
           </div>
 
-          <div class="fc-visual" role="img" aria-label="Ozzi Gear case study visual">Ozzi Gear</div>
+
         </div>
       </div>
     </div>
@@ -1290,7 +1294,7 @@
           </g>
 
           <!-- Y axis labels -->
-          <g font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#5F5E5A">
+          <g font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#5F5E5A">
             <text x="60" y="44" text-anchor="end">$200K</text>
             <text x="60" y="104" text-anchor="end">$160K</text>
             <text x="60" y="164" text-anchor="end">$120K</text>
@@ -1303,7 +1307,7 @@
           <line x1="70" y1="320" x2="780" y2="320" stroke="#2D2A6E" stroke-opacity="0.15" stroke-width="1"/>
 
           <!-- X labels (Jan-Jun) -->
-          <g font-family="Inter, sans-serif" font-size="11" font-weight="500" fill="#5F5E5A" text-anchor="middle">
+          <g font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#5F5E5A" text-anchor="middle">
             <text x="130" y="345">Jan</text>
             <text x="250" y="345">Feb</text>
             <text x="370" y="345">Mar</text>
@@ -1519,6 +1523,15 @@
     }
 
     slider.addEventListener('input', update);
+
+    // Prevent page scroll when interacting with slider on mobile
+    slider.addEventListener('touchstart', function(e) {
+      e.stopPropagation();
+    }, { passive: true });
+    slider.addEventListener('touchmove', function(e) {
+      e.stopPropagation();
+    }, { passive: true });
+
     update();
   })();
 
