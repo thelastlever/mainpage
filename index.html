@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -763,15 +764,11 @@
   }
   .pillars-top h2 { color: var(--white); max-width: 22ch; margin: 0 auto 16px; }
   .pillars-top .sub { color: var(--peri); max-width: 52ch; margin: 0 auto; font-size: clamp(15px, 1.4vw, 18px); }
-  .pillars-bottom {
-    background: var(--white);
-    padding: 0;
-  }
+  .pillars-bottom { background: var(--white); padding: 0; }
   .pillars-cards-wrap {
     position: relative;
     padding-bottom: clamp(24px, 3vw, 36px);
   }
-  /* Hard colour split — solid indigo top half */
   .pillars-cards-wrap::before {
     content: '';
     position: absolute;
@@ -785,7 +782,7 @@
     z-index: 1;
     overflow-x: hidden;
     overflow-y: visible;
-    padding: clamp(40px, 5vw, 64px) var(--pad-x) clamp(24px, 3vw, 40px);
+    padding: clamp(32px, 4vw, 52px) var(--pad-x) clamp(20px, 3vw, 32px);
     max-width: var(--max);
     margin: 0 auto;
   }
@@ -794,42 +791,46 @@
     gap: 16px;
     transition: transform 0.4s ease;
   }
+  /* Desktop: show all 4 cards evenly */
   .pillar-card {
     background: var(--white);
-    border: 1px solid var(--indigo-10);
+    border: 1px solid var(--indigo-08);
     border-radius: 16px;
-    padding: clamp(24px, 3vw, 32px);
+    padding: 28px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
     box-shadow: 0 4px 12px rgba(45,42,110,0.06), 0 8px 20px rgba(45,42,110,0.05);
-    flex: 0 0 calc(21.25% - 12px);
-    min-width: 200px;
+    flex: 0 0 calc(25% - 12px);
+    min-width: 0;
+    box-sizing: border-box;
   }
-  @media (max-width: 900px) { .pillar-card { flex: 0 0 calc(42.5% - 8px); } }
-  @media (max-width: 520px) { .pillar-card { flex: 0 0 75%; } }
+  /* Tablet: 2 cards visible */
+  @media (max-width: 900px) {
+    .pillar-card { flex: 0 0 calc(50% - 8px); }
+  }
+  /* Mobile: 1 card at a time */
+  @media (max-width: 560px) {
+    .pillar-card { flex: 0 0 calc(85vw - 40px); }
+    .pillars-track-outer { padding: 28px 20px 20px; }
+  }
   .pillar-icon {
-    width: 36px;
-    height: 36px;
-    background: none;
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
     color: var(--indigo);
   }
-  .pillar-icon svg { width: 28px; height: 28px; stroke-width: 1.4; }
+  .pillar-icon svg { width: 26px; height: 26px; stroke-width: 1.4; }
   .pillar-card h3 {
     font-family: 'Inter Tight', sans-serif;
     font-weight: 700;
-    font-size: clamp(20px, 1.8vw, 26px);
+    font-size: clamp(17px, 1.5vw, 21px);
     color: var(--indigo);
     letter-spacing: -0.02em;
     line-height: 1.2;
     margin: 0;
   }
   .pillar-card p {
-    font-size: clamp(14px, 1.1vw, 15px);
+    font-size: 14px;
     color: var(--gray);
     line-height: 1.65;
     margin: 0;
@@ -841,8 +842,9 @@
     justify-content: center;
     gap: 10px;
     padding-top: 16px;
-    padding-bottom: 0;
   }
+  /* Hide nav arrows on desktop where all cards show */
+  @media (min-width: 901px) { .pillars-nav { display: none; } }
   .pillars-btn {
     width: 36px; height: 36px;
     border-radius: 50%;
@@ -998,7 +1000,7 @@
     font-size: 13px;
   }
 </style>
-  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <link rel="icon" type="image/png" href="https://shopfresko.com/cdn/shop/files/THE_LAST_LEVER_2.png?v=1779700476&width=64">
 </head>
 <body>
 
@@ -1076,6 +1078,9 @@
                 <p class="fc-stat-num">$0</p>
                 <p class="fc-stat-label">Extra ad&nbsp;spend</p>
               </div>
+            </div>
+            <div style="text-align:center;margin-top:24px;">
+              <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call <span class="arr" aria-hidden="true">→</span></a>
             </div>
           </div>
 
