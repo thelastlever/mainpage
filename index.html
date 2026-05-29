@@ -1624,8 +1624,9 @@
     }
 
     track.addEventListener('mousedown', pointerDown);
-    window.addEventListener('mousemove', pointerMove);
-    window.addEventListener('mouseup', pointerUp);
+    track.addEventListener('mousemove', pointerMove);
+    track.addEventListener('mouseup', pointerUp);
+    track.addEventListener('mouseleave', pointerUp);
     track.addEventListener('touchstart', pointerDown, { passive: true });
     track.addEventListener('touchmove', pointerMove, { passive: false });
     track.addEventListener('touchend', pointerUp);
