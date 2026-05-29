@@ -523,7 +523,7 @@
     border-radius: 2px;
     outline: none;
     margin: 8px 0 36px;
-    touch-action: pan-x;
+    touch-action: none;
   }
   .calc-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -1654,22 +1654,6 @@
     }
 
     slider.addEventListener('input', update);
-
-    // Prevent horizontal page scroll when dragging slider on mobile
-    var sliderTouchStartX = 0;
-    var sliderTouchStartY = 0;
-    slider.addEventListener('touchstart', function(e) {
-      sliderTouchStartX = e.touches[0].clientX;
-      sliderTouchStartY = e.touches[0].clientY;
-    }, { passive: true });
-    slider.addEventListener('touchmove', function(e) {
-      var dx = Math.abs(e.touches[0].clientX - sliderTouchStartX);
-      var dy = Math.abs(e.touches[0].clientY - sliderTouchStartY);
-      // If movement is more horizontal than vertical, it's a slider drag — block page scroll
-      if (dx > dy) {
-        e.preventDefault();
-      }
-    }, { passive: false });
 
     update();
   })();
