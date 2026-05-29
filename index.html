@@ -1654,13 +1654,21 @@
 
     slider.addEventListener('input', update);
 
-    // Prevent page scroll when interacting with slider on mobile
+    // Prevent horizontal page scroll when dragging slider on mobile
+    var sliderTouchStartX = 0;
+    var sliderTouchStartY = 0;
     slider.addEventListener('touchstart', function(e) {
-      e.stopPropagation();
+      sliderTouchStartX = e.touches[0].clientX;
+      sliderTouchStartY = e.touches[0].clientY;
     }, { passive: true });
     slider.addEventListener('touchmove', function(e) {
-      e.stopPropagation();
-    }, { passive: true });
+      var dx = Math.abs(e.touches[0].clientX - sliderTouchStartX);
+      var dy = Math.abs(e.touches[0].clientY - sliderTouchStartY);
+      // If movement is more horizontal than vertical, it's a slider drag — block page scroll
+      if (dx > dy) {
+        e.preventDefault();
+      }
+    }, { passive: false });
 
     update();
   })();
