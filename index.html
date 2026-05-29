@@ -606,14 +606,13 @@
     padding: 2px 0;
     border-top: 1px solid var(--indigo-08);
     border-bottom: 1px solid var(--indigo-08);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
   }
   .partner-ticker { overflow: hidden; }
+  /* Mobile: animate, mask edges */
   .partner-track {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 40px;
     width: max-content;
     animation: ticker-scroll 26s linear infinite;
   }
@@ -621,6 +620,27 @@
   @keyframes ticker-scroll {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
+  }
+  /* Desktop: stop animation, spread evenly across full width */
+  @media (min-width: 900px) {
+    .partner-ticker-wrap {
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+    .partner-ticker {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .partner-track {
+      animation: none;
+      width: 100%;
+      justify-content: space-around;
+      gap: 0;
+    }
+    /* hide duplicate set on desktop */
+    .pl-item.pl-duplicate {
+      display: none;
+    }
   }
   .pl-item {
     display: flex;
@@ -1107,11 +1127,11 @@
               <div class="pl-item"><img src="https://shopfresko.com/cdn/shop/files/4_5cfb1845-fefe-4d08-a2eb-6cce23528816.png?v=1780017515&width=3840" alt="Pinterest Partners" class="pl-img pl-img--pinterest"></div>
               <div class="pl-item"><img src="https://shopfresko.com/cdn/shop/files/5_3784eb6a-5818-4bb3-a0ad-5268862a3e66.png?v=1780017684&width=3840" alt="Klaviyo Partner" class="pl-img pl-img--klaviyo"></div>
               <!-- duplicate for seamless loop -->
-              <div class="pl-item"><img src="https://shopfresko.com/cdn/shop/files/1_a62d33e7-02d7-4ffe-baf7-93efde1940a9.png?v=1780017516&width=3840" alt="Meta" class="pl-img pl-img--meta"></div>
-              <div class="pl-item"><img src="https://shopfresko.com/cdn/shop/files/2_a94fceda-0752-4b20-81b0-efa10afcb1e0.png?v=1780017516&width=3840" alt="Google Partner" class="pl-img pl-img--google"></div>
-              <div class="pl-item"><img src="https://shopfresko.com/cdn/shop/files/3_05e9da18-1d4e-4521-b08f-6d77440dc0e4.png?v=1780017516&width=3840" alt="TikTok Marketing Partners" class="pl-img pl-img--tiktok"></div>
-              <div class="pl-item"><img src="https://shopfresko.com/cdn/shop/files/4_5cfb1845-fefe-4d08-a2eb-6cce23528816.png?v=1780017515&width=3840" alt="Pinterest Partners" class="pl-img pl-img--pinterest"></div>
-              <div class="pl-item"><img src="https://shopfresko.com/cdn/shop/files/5_3784eb6a-5818-4bb3-a0ad-5268862a3e66.png?v=1780017684&width=3840" alt="Klaviyo Partner" class="pl-img pl-img--klaviyo"></div>
+              <div class="pl-item pl-duplicate"><img src="https://shopfresko.com/cdn/shop/files/1_a62d33e7-02d7-4ffe-baf7-93efde1940a9.png?v=1780017516&width=3840" alt="Meta" class="pl-img pl-img--meta"></div>
+              <div class="pl-item pl-duplicate"><img src="https://shopfresko.com/cdn/shop/files/2_a94fceda-0752-4b20-81b0-efa10afcb1e0.png?v=1780017516&width=3840" alt="Google Partner" class="pl-img pl-img--google"></div>
+              <div class="pl-item pl-duplicate"><img src="https://shopfresko.com/cdn/shop/files/3_05e9da18-1d4e-4521-b08f-6d77440dc0e4.png?v=1780017516&width=3840" alt="TikTok Marketing Partners" class="pl-img pl-img--tiktok"></div>
+              <div class="pl-item pl-duplicate"><img src="https://shopfresko.com/cdn/shop/files/4_5cfb1845-fefe-4d08-a2eb-6cce23528816.png?v=1780017515&width=3840" alt="Pinterest Partners" class="pl-img pl-img--pinterest"></div>
+              <div class="pl-item pl-duplicate"><img src="https://shopfresko.com/cdn/shop/files/5_3784eb6a-5818-4bb3-a0ad-5268862a3e66.png?v=1780017684&width=3840" alt="Klaviyo Partner" class="pl-img pl-img--klaviyo"></div>
             </div>
           </div>
         </div>
