@@ -629,15 +629,13 @@
   }
   .pl-img {
     display: block;
-    filter: grayscale(100%);
-    opacity: 0.65;
     object-fit: contain;
   }
-  .pl-img--meta     { height: 24px; width: auto; }
-  .pl-img--google   { height: 44px; width: auto; }
-  .pl-img--tiktok   { height: 36px; width: auto; }
-  .pl-img--pinterest{ height: 28px; width: auto; }
-  .pl-img--klaviyo  { height: 36px; width: auto; }
+  .pl-img--meta     { height: 120px; width: auto; }
+  .pl-img--google   { height: 220px; width: auto; }
+  .pl-img--tiktok   { height: 180px; width: auto; }
+  .pl-img--pinterest{ height: 140px; width: auto; }
+  .pl-img--klaviyo  { height: 180px; width: auto; }
 
   /* ============ VSL ============ */
   .vsl { padding-top: 0; padding-bottom: clamp(32px, 4vw, 56px); }
@@ -650,6 +648,11 @@
   .vsl-intro h2 {
     font-size: clamp(28px, 3.4vw, 40px);
     margin-bottom: 16px;
+  }
+  .vsl-line-small {
+    font-size: clamp(14px, 1.7vw, 20px);
+    display: block;
+    margin-bottom: 4px;
   }
   .vsl-intro p {
     color: var(--gray);
@@ -1091,7 +1094,7 @@
   <section class="vsl" aria-labelledby="vsl-heading">
     <div class="container">
       <div class="vsl-intro">
-        <h2 id="vsl-heading">Revenue looks good on your dashboard.<br><span style="color: var(--peri);">Profit looks good in your wallet.</span></h2>
+        <h2 id="vsl-heading"><span class="vsl-line-small">Revenue looks good on your dashboard.</span><br><span style="color: var(--peri);">Profit looks good in your wallet.</span></h2>
         <p>See how we can help.</p>
 
         <!-- Partner logos -->
