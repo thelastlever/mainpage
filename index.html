@@ -64,6 +64,8 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    overscroll-behavior-x: none;
   }
   img, svg { display: block; max-width: 100%; }
   a { color: inherit; text-decoration: none; }
@@ -595,7 +597,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
   .stat.peri { color: var(--peri); }
 
   /* ============ CAC CALCULATOR ============ */
-  .cac-section { position: relative; padding: 0; }
+  .cac-section { position: relative; padding: 0; overflow: hidden; }
   .cac-section-top {
     background: var(--indigo);
     padding: var(--pad-y) 0 0;
@@ -623,6 +625,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     border-radius: var(--r-card);
     padding: clamp(28px, 4vw, 48px);
     box-shadow: 0 4px 12px rgba(45,42,110,0.06), 0 8px 20px rgba(45,42,110,0.05);
+    touch-action: pan-y;
   }
   .cac-sliders {
     display: grid;
