@@ -138,6 +138,10 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     white-space: nowrap;
     line-height: 1;
   }
+  .btn-lg {
+    font-size: 17.5px;
+    padding: 15px 27px;
+  }
   .btn .arr { transition: transform .18s ease; }
   .btn:hover .arr { transform: translateX(3px); }
   .btn-primary {
@@ -238,7 +242,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
   }
   /* ============ WORK ============ */
   .section-head {
@@ -480,9 +484,9 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     -webkit-overflow-scrolling: touch;
     padding: 4px 4px 20px;
     margin: 0 -4px;
-    scrollbar-width: none;          /* Firefox */
+    scrollbar-width: none;
   }
-  .carousel-track::-webkit-scrollbar { display: none; } /* WebKit */
+  .carousel-track::-webkit-scrollbar { display: none; }
   .carousel-track > .testi-card {
     flex: 0 0 auto;
     width: clamp(280px, 42%, 460px);
@@ -536,11 +540,11 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     appearance: none;
     width: 100%;
     height: 4px;
-    background: var(--indigo-15);
+    background: var(--indigo-20);
     border-radius: 2px;
     outline: none;
     margin: 8px 0 36px;
-    touch-action: none;
+    touch-action: pan-x;
   }
   .calc-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -590,6 +594,87 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
   .stat.indigo { color: var(--indigo); }
   .stat.peri { color: var(--peri); }
 
+  /* ============ CAC CALCULATOR ============ */
+  .cac-section { position: relative; padding: 0; }
+  .cac-section-top {
+    background: var(--indigo);
+    padding: var(--pad-y) 0 0;
+    text-align: center;
+  }
+  .cac-section-top h2 { max-width: 24ch; margin: 0 auto 16px; }
+  .cac-section-top .lead { max-width: 52ch; margin: 0 auto; }
+  .cac-section-bottom { background: var(--white); padding: 0; }
+  .cac-card-wrap {
+    position: relative;
+    padding-bottom: var(--pad-y);
+  }
+  .cac-card-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: var(--cac-split-h, 50%);
+    background: var(--indigo);
+    z-index: 0;
+  }
+  .cac-card-wrap .container { position: relative; z-index: 1; padding-top: clamp(32px, 4vw, 52px); }
+  .cac-calc {
+    background: var(--white);
+    border: 1px solid var(--indigo-10);
+    border-radius: var(--r-card);
+    padding: clamp(28px, 4vw, 48px);
+    box-shadow: 0 4px 12px rgba(45,42,110,0.06), 0 8px 20px rgba(45,42,110,0.05);
+  }
+  .cac-sliders {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 36px;
+  }
+  @media (max-width: 640px) { .cac-sliders { grid-template-columns: 1fr; gap: 28px; } }
+  .cac-slider-group label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--indigo);
+    margin-bottom: 6px;
+    display: block;
+  }
+  .cac-slider-val {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 3vw, 36px);
+    color: var(--indigo);
+    letter-spacing: -0.02em;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  .cac-readouts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding-top: 32px;
+    border-top: 1px solid var(--indigo-10);
+  }
+  @media (max-width: 640px) { .cac-readouts { grid-template-columns: 1fr; gap: 16px; } }
+  .cac-readout-card {
+    background: var(--indigo);
+    border-radius: var(--r-card);
+    padding: 20px;
+  }
+  .cac-readout-card .readout-label { color: var(--peri); margin-bottom: 8px; }
+  .cac-readout-card .stat { font-size: clamp(24px, 2.8vw, 36px); }
+  .cac-readout-card .stat.indigo { color: var(--white); }
+  .cac-readout-card .stat.peri { color: var(--peri); }
+  .cac-note {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 16px;
+    text-align: center;
+    opacity: 0.7;
+  }
+
   /* ============ CHART ============ */
   .chart-wrap {
     background: var(--white);
@@ -625,7 +710,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     border-bottom: 1px solid var(--indigo-08);
   }
   .partner-ticker { overflow: hidden; }
-  /* Mobile: animate, mask edges */
   .partner-track {
     display: flex;
     align-items: center;
@@ -638,7 +722,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
-  /* Desktop: stop animation, spread evenly across full width */
   @media (min-width: 900px) {
     .partner-ticker-wrap {
       -webkit-mask-image: none;
@@ -654,7 +737,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
       justify-content: space-around;
       gap: 0;
     }
-    /* hide duplicate set on desktop */
     .pl-item.pl-duplicate {
       display: none;
     }
@@ -668,11 +750,11 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     display: block;
     object-fit: contain;
   }
-  .pl-img--meta     { height: 63px; width: auto; }
-  .pl-img--google   { height: 63px; width: auto; }
-  .pl-img--tiktok   { height: 63px; width: auto; }
-  .pl-img--pinterest{ height: 63px; width: auto; }
-  .pl-img--klaviyo  { height: 63px; width: auto; }
+  .pl-img--meta     { height: 79px; width: auto; }
+  .pl-img--google   { height: 79px; width: auto; }
+  .pl-img--tiktok   { height: 79px; width: auto; }
+  .pl-img--pinterest{ height: 79px; width: auto; }
+  .pl-img--klaviyo  { height: 79px; width: auto; }
 
   /* ============ VSL ============ */
   .vsl { padding-top: 0; padding-bottom: clamp(32px, 4vw, 56px); }
@@ -687,13 +769,14 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     margin-bottom: 16px;
   }
   .vsl-line-small {
-    font-size: clamp(14px, 1.7vw, 20px);
+    font-size: clamp(17.5px, 2.1vw, 25px);
     display: block;
     margin-bottom: 4px;
   }
   .vsl-intro p {
     color: var(--gray);
     font-size: clamp(16px, 1.4vw, 18px);
+    margin-top: 16px;
   }
   .vsl-intro p strong {
     color: var(--indigo);
@@ -737,7 +820,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     width: 32%;
     height: 32%;
     fill: var(--indigo);
-    margin-left: 6%; /* visually center the play triangle */
+    margin-left: 6%;
   }
   .vsl-caption {
     text-align: center;
@@ -848,7 +931,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
   }
 
   /* ============ PILLARS ============ */
-  .pillars { position: relative; }
+  .pillars { position: relative; padding-bottom: 0; }
   .pillars-top {
     background: var(--indigo);
     padding: var(--pad-y) 0 0;
@@ -886,7 +969,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     user-select: none;
   }
   .pillars-track:active { cursor: grabbing; }
-  /* Desktop: show all 4 cards evenly */
   .pillar-card {
     background: var(--white);
     border: 1px solid var(--indigo-08);
@@ -900,11 +982,9 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     min-width: 0;
     box-sizing: border-box;
   }
-  /* Tablet: 2 cards visible */
   @media (max-width: 900px) {
     .pillar-card { flex: 0 0 calc(50% - 8px); }
   }
-  /* Mobile: 1 card at a time */
   @media (max-width: 560px) {
     .pillar-card { flex: 0 0 calc(85vw - 40px); }
     .pillars-track-outer { padding: 28px 20px 20px; }
@@ -938,7 +1018,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     gap: 10px;
     padding-top: 16px;
   }
-  /* Hide nav arrows on desktop where all cards show */
   @media (min-width: 901px) { .pillars-nav { display: none; } }
   .pillars-btn {
     width: 36px; height: 36px;
@@ -1120,9 +1199,10 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
   <section class="hero">
     <div class="container">
       <p class="eyebrow">Imagine if you added</p>
-      <h1><span class="accent">+25% profit.</span><span class="underlined">$0 on ads.<svg class="hand-underline" viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M6 11 C70 5, 150 5, 210 8 C248 10, 280 9, 294 7" fill="none" stroke="#8B95E8" stroke-width="6" stroke-linecap="round"/></svg></span></h1>
+      <h1><span class="accent">25% more profit.</span><span class="underlined">$0 extra on ads.<svg class="hand-underline" viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M6 11 C70 5, 150 5, 210 8 C248 10, 280 9, 294 7" fill="none" stroke="#8B95E8" stroke-width="6" stroke-linecap="round"/></svg></span></h1>
       <div class="hero-cta-row">
-        <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call <span class="arr" aria-hidden="true">→</span></a>
+        <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
+        <a href="#cac-calc" class="btn btn-secondary" style="font-size:10.5px;padding:9px 17px;">Calculate your potential profit <span class="arr" aria-hidden="true">↓</span></a>
       </div>
     </div>
   </section>
@@ -1131,9 +1211,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
   <section class="vsl" aria-labelledby="vsl-heading">
     <div class="container">
       <div class="vsl-intro">
-        <h2 id="vsl-heading"><span class="vsl-line-small">Revenue looks good on your dashboard.</span><br><span style="color: var(--peri);">Profit looks good in your wallet.</span></h2>
-        <p>See how we can help.</p>
-
+        <h2 id="vsl-heading"><span class="vsl-line-small">Revenue looks good on your dashboard.</span><span style="color: var(--peri);">Profit looks good in your wallet.</span></h2>
         <!-- Partner logos -->
         <div class="partner-ticker-wrap">
           <div class="partner-ticker">
@@ -1160,7 +1238,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
         </div>
       </div>
       <div style="text-align:center; margin-top: 28px;">
-        <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call <span class="arr" aria-hidden="true">→</span></a>
+        <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
       </div>
     </div>
   </section>
@@ -1179,8 +1257,8 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
         <div class="featured-case">
           <div>
             <span class="fc-tag">Founder's brand</span>
-            <h2 class="fc-title" id="ozzi-heading">Ozzi Gear: from $2M to $2.5M a month, in 3 months.</h2>
-            <p class="fc-body">Ozzi Gear is co-founder Peter's brand. He used the exact playbook we now run for clients. Tailored landing pages, sharper offers, methodical changes to existing flows. The result: monthly profit up from $400K to $500K, 25% more straight to the bottom line, with no new ad spend. Now we help other ambitious brands do the same.</p>
+            <h2 class="fc-title" id="ozzi-heading">Ozzi Gear: from $1.5M to $2M a month, in 3 months.</h2>
+            <p class="fc-body">Ozzi Gear is co-founder Peter's brand. He used the exact playbook we now run for clients. Tailored landing pages, sharper offers, methodical changes to existing flows. The result: monthly profit up from $300K to $400K, 25% more straight to the bottom line, with no new ad spend. Now we help other ambitious brands do the same.</p>
 
             <div class="fc-stats">
               <div>
@@ -1197,7 +1275,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
               </div>
             </div>
             <div style="text-align:center;margin-top:24px;">
-              <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call <span class="arr" aria-hidden="true">→</span></a>
+              <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
             </div>
           </div>
 
@@ -1262,37 +1340,55 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
   </section>
 
   <!-- ============ PROFIT QUOTE ============ -->
-  <section class="profit-quote-section">
+  <section class="profit-quote-section" style="padding: 8px 0 24px;">
     <div class="container">
-      <h2 class="profit-quote-headline">Revenue looks good on your dashboard.<br><span>Profit looks good in your wallet.</span></h2>
-      <p class="profit-quote-sub">Find out exactly how much profit you're leaving on the table.</p>
       <div class="profit-quote-btns">
-        <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call <span class="arr" aria-hidden="true">→</span></a>
-        <a href="#upside" class="btn btn-secondary">Calculate your potential <span class="arr" aria-hidden="true">↓</span></a>
+        <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
+        <a href="#cac-calc" class="btn btn-secondary btn-lg">Calculate your potential <span class="arr" aria-hidden="true">↓</span></a>
       </div>
     </div>
   </section>
 
-  <!-- ============ CALCULATOR ============ -->
-  <section id="upside" class="tinted">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">Your upside</p>
-        <h2>Find out how much profit you could add.</h2>
+  <!-- ============ CAC CALCULATOR ============ -->
+  <section id="cac-calc" class="cac-section">
+    <div class="cac-section-top">
+      <div class="container">
+        <p class="eyebrow" style="color:var(--peri);">Your acquisition cost</p>
+        <h2 style="color:var(--white);">See how we lower your CAC and lift your <span style="position:relative;display:inline-block;color:var(--peri);">profit<svg viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-2%;bottom:-0.15em;width:104%;height:0.3em;overflow:visible;pointer-events:none;"><path d="M3 6 C30 2, 60 2, 90 5 C105 6.5, 115 6, 117 5" fill="none" stroke="#8B95E8" stroke-width="3" stroke-linecap="round"/></svg></span>.</h2>
+        <p class="lead" style="color:var(--peri);">We reduce CAC by 10% on average within the first 90 days. Put your numbers in and see what that's worth.</p>
       </div>
-
-      <div class="calc">
-        <label for="revenue" class="calc-label">What is your current monthly profit?</label>
-        <input type="range" id="revenue" class="calc-slider" min="25000" max="250000" step="5000" value="25000" aria-describedby="currentReadout">
-
-        <div class="calc-readouts">
-          <div>
-            <span class="readout-label">Current monthly profit</span>
-            <div id="currentReadout" class="stat indigo">$25,000</div>
-          </div>
-          <div>
-            <span class="readout-label">Potential monthly profit with The Last Lever</span>
-            <div id="upsideReadout" class="stat peri">$31,250</div>
+    </div>
+    <div class="cac-section-bottom">
+      <div class="cac-card-wrap">
+        <div class="container">
+          <div class="cac-calc">
+            <div class="cac-sliders">
+              <div class="cac-slider-group">
+                <label for="cac-input">Current cost per acquisition (CAC)</label>
+                <div class="cac-slider-val" id="cacDisplay">$80</div>
+                <input type="range" id="cac-input" class="calc-slider" min="30" max="500" step="1" value="80">
+              </div>
+              <div class="cac-slider-group">
+                <label for="orders-input">Monthly orders</label>
+                <div class="cac-slider-val" id="ordersDisplay">1,000</div>
+                <input type="range" id="orders-input" class="calc-slider" min="100" max="20000" step="100" value="1000">
+              </div>
+            </div>
+            <div class="cac-readouts">
+              <div class="cac-readout-card">
+                <span class="readout-label">Current monthly acquisition spend</span>
+                <div id="cacCurrentSpend" class="stat indigo">$80,000</div>
+              </div>
+              <div class="cac-readout-card">
+                <span class="readout-label">Spend after 10% CAC reduction</span>
+                <div id="cacNewSpend" class="stat indigo">$72,000</div>
+              </div>
+              <div class="cac-readout-card">
+                <span class="readout-label">Extra profit per month</span>
+                <div id="cacSaving" class="stat peri">$8,000</div>
+              </div>
+            </div>
+            <p class="cac-note">Based on a 10% CAC reduction, the average we deliver within the first 90 days.</p>
           </div>
         </div>
       </div>
@@ -1389,7 +1485,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
 
   <!-- ============ CTA BETWEEN RESULTS AND NUMBERS ============ -->
   <div style="text-align:center; padding: 5px 0 0;">
-    <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call <span class="arr" aria-hidden="true">→</span></a>
+    <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
   </div>
 
   <!-- ============ THE NUMBERS ============ -->
@@ -1402,7 +1498,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
 
       <div class="chart-wrap">
         <svg viewBox="-10 0 820 360" role="img" aria-label="Line chart comparing monthly revenue with and without The Last Lever over six months. Without The Last Lever stays flat around $80K. With The Last Lever grows from $80K to $190K." xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
-          <!-- Y axis lines -->
           <g stroke="#2D2A6E" stroke-opacity="0.08" stroke-width="1">
             <line x1="70" y1="40" x2="780" y2="40"/>
             <line x1="70" y1="100" x2="780" y2="100"/>
@@ -1411,8 +1506,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
             <line x1="70" y1="280" x2="780" y2="280"/>
             <line x1="70" y1="320" x2="780" y2="320"/>
           </g>
-
-          <!-- Y axis labels -->
           <g font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#5F5E5A">
             <text x="60" y="44" text-anchor="end">$200K</text>
             <text x="60" y="104" text-anchor="end">$160K</text>
@@ -1421,11 +1514,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
             <text x="60" y="284" text-anchor="end">$40K</text>
             <text x="60" y="324" text-anchor="end">$0</text>
           </g>
-
-          <!-- X axis -->
           <line x1="70" y1="320" x2="780" y2="320" stroke="#2D2A6E" stroke-opacity="0.15" stroke-width="1"/>
-
-          <!-- X labels (Jan-Jun) -->
           <g font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#5F5E5A" text-anchor="middle">
             <text x="130" y="345">Jan</text>
             <text x="250" y="345">Feb</text>
@@ -1434,23 +1523,10 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
             <text x="610" y="345">May</text>
             <text x="730" y="345">Jun</text>
           </g>
-
-          <!-- Without TLL: flat ~$80K (y=220) -->
-          <polyline
-            points="130,220 250,222 370,218 490,221 610,219 730,220"
-            fill="none" stroke="#5F5E5A" stroke-opacity="0.55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-
-          <!-- With TLL: grows from $80K (220) to $190K (55) -->
-          <!-- $80K -> $100K -> $125K -> $150K -> $170K -> $190K -->
-          <!-- y mapping: $80K=220, $100K=190, $125K=152, $150K=115, $170K=85, $190K=55 -->
-          <polyline
-            points="130,220 250,190 370,152 490,115 610,85 730,55"
-            fill="none" stroke="#2D2A6E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-
-          <!-- Periwinkle dot on final indigo point -->
+          <polyline points="130,220 250,222 370,218 490,221 610,219 730,220" fill="none" stroke="#5F5E5A" stroke-opacity="0.55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <polyline points="130,220 250,190 370,152 490,115 610,85 730,55" fill="none" stroke="#2D2A6E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
           <circle cx="730" cy="55" r="7" fill="#8B95E8" stroke="#FFFFFF" stroke-width="2"/>
         </svg>
-
         <div class="chart-legend">
           <div class="legend-item"><span class="legend-dot indigo"></span> With The Last Lever</div>
           <div class="legend-item"><span class="legend-dot gray"></span> Without The Last Lever</div>
@@ -1545,7 +1621,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
       <p class="eyebrow on-indigo">Ready?</p>
       <h2>Have we convinced you? Let us do the same for your brand.</h2>
       <p class="sub">Book a free 45-minute strategy session. No fluff, just a clear plan.</p>
-      <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-inverse">Book a call <span class="arr" aria-hidden="true">→</span></a>
+      <a href="https://calendly.com/admin-thelastlever/45-min-introduction-call" target="_blank" rel="noopener" class="btn btn-inverse btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
     </div>
   </section>
 
@@ -1609,7 +1685,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
 
     var idx = 0;
     var total = track.querySelectorAll('.pillar-card').length;
-    var isAnimating = false;
 
     function cardWidth() {
       var card = track.querySelector('.pillar-card');
@@ -1618,7 +1693,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
 
     function goTo(newIdx, animate) {
       if (animate === undefined) animate = true;
-      idx = ((newIdx % total) + total) % total; // wrap
+      idx = ((newIdx % total) + total) % total;
       track.style.transition = animate ? 'transform 0.35s ease' : 'none';
       track.style.transform = 'translateX(-' + (idx * cardWidth()) + 'px)';
     }
@@ -1626,7 +1701,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     next.addEventListener('click', function () { goTo(idx + 1); });
     prev.addEventListener('click', function () { goTo(idx - 1); });
 
-    // Drag / touch support
     var startX = 0, startY = 0, isDragging = false, dragDelta = 0, startTranslate = 0;
 
     function pointerDown(e) {
@@ -1642,7 +1716,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
       if (!isDragging) return;
       var curX = e.touches ? e.touches[0].clientX : e.clientX;
       var curY = e.touches ? e.touches[0].clientY : e.clientY;
-      // cancel if scrolling vertically
       if (Math.abs(curY - startY) > Math.abs(curX - startX) && dragDelta === 0) {
         isDragging = false; return;
       }
@@ -1657,7 +1730,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
       var threshold = cardWidth() * 0.25;
       if (dragDelta < -threshold) goTo(idx + 1);
       else if (dragDelta > threshold) goTo(idx - 1);
-      else goTo(idx); // snap back
+      else goTo(idx);
     }
 
     track.addEventListener('mousedown', pointerDown);
@@ -1667,31 +1740,56 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     track.addEventListener('touchstart', pointerDown, { passive: true });
     track.addEventListener('touchmove', pointerMove, { passive: false });
     track.addEventListener('touchend', pointerUp);
-
-    // Prevent click after drag
     track.addEventListener('dragstart', function(e) { e.preventDefault(); });
 
     goTo(0, false);
   })();
 
-  // ============ REVENUE CALCULATOR ============
+  // ============ CAC COLOUR SPLIT ============
   (function () {
-    var slider = document.getElementById('revenue');
-    var current = document.getElementById('currentReadout');
-    var upside = document.getElementById('upsideReadout');
-
-    function format(n) {
-      return '$' + Math.round(n).toLocaleString('en-US');
+    function setSplit() {
+      var wrap = document.querySelector('.cac-card-wrap');
+      var card = document.querySelector('.cac-calc');
+      if (!wrap || !card) return;
+      var cardHeight = card.offsetHeight;
+      var trackTop = card.getBoundingClientRect().top - wrap.getBoundingClientRect().top;
+      var splitPx = trackTop + (cardHeight / 2);
+      wrap.style.setProperty('--cac-split-h', splitPx + 'px');
     }
+    window.addEventListener('load', setSplit);
+    window.addEventListener('resize', setSplit);
+  })();
+
+  // ============ CAC CALCULATOR ============
+  (function () {
+    var cacSlider = document.getElementById('cac-input');
+    var ordersSlider = document.getElementById('orders-input');
+    var cacDisplay = document.getElementById('cacDisplay');
+    var ordersDisplay = document.getElementById('ordersDisplay');
+    var cacCurrentSpend = document.getElementById('cacCurrentSpend');
+    var cacNewSpend = document.getElementById('cacNewSpend');
+    var cacSaving = document.getElementById('cacSaving');
+
+    function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+    function fmtNum(n) { return Math.round(n).toLocaleString('en-US'); }
 
     function update() {
-      var v = parseInt(slider.value, 10) || 0;
-      current.textContent = format(v);
-      upside.textContent = format(v * 1.25);
+      var cac = parseInt(cacSlider.value, 10);
+      var orders = parseInt(ordersSlider.value, 10);
+      var currentSpend = cac * orders;
+      var newCac = cac * 0.9;
+      var newSpend = newCac * orders;
+      var saving = currentSpend - newSpend;
+
+      cacDisplay.textContent = fmt(cac);
+      ordersDisplay.textContent = fmtNum(orders);
+      cacCurrentSpend.textContent = fmt(currentSpend);
+      cacNewSpend.textContent = fmt(newSpend);
+      cacSaving.textContent = fmt(saving);
     }
 
-    slider.addEventListener('input', update);
-
+    cacSlider.addEventListener('input', update);
+    ordersSlider.addEventListener('input', update);
     update();
   })();
 
@@ -1705,10 +1803,9 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     function scrollAmount() {
       var card = track.querySelector('.testi-card');
       var gap = 24;
-      // Move by roughly the visible cards minus one, so a little context carries over.
       var step = card ? card.getBoundingClientRect().width + gap : track.clientWidth * 0.8;
       var visible = Math.max(1, Math.floor(track.clientWidth / step));
-      return step * Math.max(1, visible - 0); // advance by one card width at minimum
+      return step * Math.max(1, visible - 0);
     }
 
     function updateButtons() {
