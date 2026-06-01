@@ -1235,12 +1235,18 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
         </div>
       </div>
 
-      <div style="padding:56.25% 0 0 0;position:relative;border-radius:var(--r-card);overflow:hidden;">
-        <iframe src="https://player.vimeo.com/video/1197354040?autoplay=0&title=0&byline=0&portrait=0"
-          style="position:absolute;top:0;left:0;width:100%;height:100%;"
-          frameborder="0"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen></iframe>
+      <div id="vsl-wrap" style="position:relative;padding:56.25% 0 0 0;border-radius:var(--r-card);overflow:hidden;cursor:pointer;" onclick="
+        var wrap = document.getElementById('vsl-wrap');
+        wrap.innerHTML = '<iframe src=\'https://player.vimeo.com/video/1197354040?autoplay=1&title=0&byline=0&portrait=0\' style=\'position:absolute;top:0;left:0;width:100%;height:100%;\' frameborder=\'0\' allow=\'autoplay; fullscreen; picture-in-picture\' allowfullscreen></iframe>';
+      ">
+        <img src="https://i.vimeocdn.com/video/2163673127-633980540805b59c98746c39fc970f3fc7183e72a035e36f2d5567cc0fbf6d2a-d_2400?region=us"
+          alt="Watch our video"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(45,42,110,0.25);">
+          <div style="width:72px;height:72px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(0,0,0,0.25);transition:transform .2s;">
+            <svg viewBox="0 0 24 24" style="width:28px;height:28px;fill:var(--indigo);margin-left:4px;"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
       </div>
       <div style="text-align:center; margin-top: 28px;">
         <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
