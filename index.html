@@ -18,6 +18,14 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-68WYWH3FN9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-68WYWH3FN9');
+  </script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>The Last Lever | E-commerce growth for ambitious DTC brands</title>
@@ -1760,6 +1768,35 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     track.addEventListener('dragstart', function(e) { e.preventDefault(); });
 
     goTo(0, false);
+  })();
+
+  // ============ BUTTON CLICK TRACKING ============
+  (function () {
+    var buttons = [
+      { id: 'btn-nav',        label: 'Nav',              el: document.querySelector('.nav .btn-primary') },
+      { id: 'btn-hero',       label: 'Hero',             el: document.querySelector('.hero .btn-primary') },
+      { id: 'btn-vsl',        label: 'VSL',              el: document.querySelector('.vsl .btn-primary') },
+      { id: 'btn-ozzi',       label: 'Ozzi Gear',        el: document.querySelector('.featured-case-wrap .btn-primary') },
+      { id: 'btn-pillars',    label: 'Pillars',          el: document.querySelector('.profit-quote-section .btn-primary') },
+      { id: 'btn-calculator', label: 'CAC Calculator',   el: document.querySelector('.cac-calc .btn-primary') },
+      { id: 'btn-final-cta',  label: 'Final CTA',        el: document.querySelector('.final-cta .btn-inverse') },
+    ];
+
+    buttons.forEach(function (b) {
+      if (!b.el) return;
+      b.el.addEventListener('click', function () {
+        // GA4
+        if (typeof gtag === 'function') {
+          gtag('event', 'book_a_call_click', {
+            button_location: b.label
+          });
+        }
+        // Meta Pixel
+        if (typeof fbq === 'function') {
+          fbq('trackCustom', 'BookACallClick', { button_location: b.label });
+        }
+      });
+    });
   })();
 
   // ============ SLIDER TOUCH ISOLATION ============
