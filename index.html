@@ -1710,6 +1710,8 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     var startX = 0, startY = 0, isDragging = false, dragDelta = 0, startTranslate = 0;
 
     function pointerDown(e) {
+      // Don't hijack slider interactions
+      if (e.target && e.target.type === 'range') return;
       isDragging = true;
       startX = e.touches ? e.touches[0].clientX : e.clientX;
       startY = e.touches ? e.touches[0].clientY : e.clientY;
@@ -1749,6 +1751,22 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     track.addEventListener('dragstart', function(e) { e.preventDefault(); });
 
     goTo(0, false);
+  })();
+
+  // ============ SLIDER TOUCH ISOLATION ============
+  // Prevent sliders from triggering carousel drag or page scroll
+  (function () {
+    document.querySelectorAll('input[type="range"]').forEach(function (slider) {
+      slider.addEventListener('touchstart', function (e) {
+        e.stopPropagation();
+      }, { passive: true });
+      slider.addEventListener('touchmove', function (e) {
+        e.stopPropagation();
+      }, { passive: true });
+      slider.addEventListener('touchend', function (e) {
+        e.stopPropagation();
+      }, { passive: true });
+    });
   })();
 
   // ============ CAC COLOUR SPLIT ============
