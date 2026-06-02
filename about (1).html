@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About - The Last Lever</title>
+<meta name="description" content="Peter built Ozzi Gear to $2.5M a month. Then he figured out the system that did it. Now he runs The Last Lever to give other DTC founders the same edge." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://shopfresko.com/cdn/shop/files/Untitled_design_3.png?v=1780009987&width=64">
+<style>
+  /* ============ TOKENS ============ */
+  :root {
+    --indigo: #2D2A6E;
+    --peri: #8B95E8;
+    --white: #FFFFFF;
+    --gray: #5F5E5A;
+    --indigo-04: rgba(45,42,110,0.04);
+    --indigo-06: rgba(45,42,110,0.06);
+    --indigo-08: rgba(45,42,110,0.08);
+    --indigo-10: rgba(45,42,110,0.10);
+    --indigo-15: rgba(45,42,110,0.15);
+    --indigo-20: rgba(45,42,110,0.20);
+    --peri-12: rgba(139,149,232,0.12);
+    --peri-20: rgba(139,149,232,0.20);
+    --max: 1200px;
+    --pad-x: clamp(20px,4vw,48px);
+    --pad-y: clamp(56px,7vw,96px);
+    --tint: #F4F5FC;
+    --r-card: 12px;
+    --r-btn: 8px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--white);
+    color: var(--gray);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; }
+  h1, h2, h3, h4 { font-family: 'Inter Tight', sans-serif; color: var(--indigo); margin: 0; }
+  h1 { font-weight: 800; font-size: clamp(40px,6.6vw,72px); letter-spacing: -0.025em; line-height: 1.05; }
+  h2 { font-weight: 800; font-size: clamp(32px,4.6vw,56px); letter-spacing: -0.02em; line-height: 1.1; }
+  h3 { font-weight: 500; font-size: clamp(20px,2vw,24px); letter-spacing: -0.015em; line-height: 1.25; }
+  p { margin: 0; }
+  .lead { font-size: clamp(16px,1.4vw,19px); line-height: 1.6; color: var(--gray); max-width: 56ch; }
+  .eyebrow { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--indigo); margin: 0 0 20px; display: inline-block; }
+  .eyebrow.on-indigo { color: var(--peri); }
+  .container { width: 100%; max-width: var(--max); margin: 0 auto; padding-left: var(--pad-x); padding-right: var(--pad-x); }
+  section { padding: var(--pad-y) 0; }
+  section.tinted { background: var(--tint); }
+
+  /* ============ BUTTONS ============ */
+  .btn { display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.01em; padding: 12px 22px; border-radius: var(--r-btn); transition: transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease; white-space: nowrap; line-height: 1; }
+  .btn-lg { font-size: 17.5px; padding: 15px 27px; }
+  .btn .arr { transition: transform .18s ease; }
+  .btn:hover .arr { transform: translateX(3px); }
+  .btn-primary { background: var(--indigo); color: var(--white); }
+  .btn-primary:hover { background: #25225c; }
+  .btn-secondary { background: transparent; color: var(--indigo); border: 1px solid var(--indigo-20); }
+  .btn-secondary:hover { background: var(--indigo-04); }
+  .btn-inverse { background: var(--white); color: var(--indigo); }
+  .btn-inverse:hover { background: #f1f1fb; }
+
+  /* ============ NAV ============ */
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--white); border-bottom: 1px solid var(--indigo-08); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+  .wordmark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .wordmark img { flex-shrink: 0; display: block; }
+  .wordmark span { font-family: 'Inter Tight', sans-serif; font-weight: 700; color: var(--indigo); font-size: 18px; letter-spacing: -0.02em; white-space: nowrap; line-height: 1; align-self: center; }
+  .nav-links { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; color: var(--indigo); transition: opacity .15s ease; }
+  .nav-links a:hover { opacity: .65; }
+  .nav-links a.active { font-weight: 700; opacity: 1; }
+  @media (max-width: 768px) { .nav-links { display: none; } }
+
+  /* ============ PAGE HERO ============ */
+  .page-hero { padding: clamp(48px,6vw,80px) 0 clamp(32px,4vw,56px); }
+  .page-hero .eyebrow { margin-bottom: 16px; }
+  .page-hero h1 { max-width: 18ch; margin-bottom: 24px; }
+  .page-hero .lead { max-width: 52ch; }
+
+  /* ============ FOUNDER SECTION ============ */
+  .founder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px,6vw,80px); align-items: start; }
+  @media (max-width: 900px) { .founder-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+  .founder-img-wrap { position: relative; }
+  .founder-photo-area {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: var(--indigo-08);
+    border-radius: var(--r-card);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .founder-photo-area img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-card); }
+  .founder-photo-placeholder {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+    color: rgba(45,42,110,0.4);
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase; text-align: center; padding: 24px;
+  }
+  .founder-photo-placeholder svg { width: 40px; height: 40px; opacity: 0.4; }
+
+  .stat-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--indigo);
+    border-radius: var(--r-card);
+    padding: 20px 24px;
+    display: flex; flex-direction: column; gap: 2px;
+    box-shadow: 0 4px 20px rgba(45,42,110,0.25);
+  }
+  @media (max-width: 640px) { .stat-badge { bottom: -16px; right: 16px; } }
+  .stat-badge-num { font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: clamp(28px,3vw,36px); color: var(--peri); letter-spacing: -0.02em; line-height: 1; }
+  .stat-badge-label { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.7); }
+
+  .founder-content { padding-top: 8px; }
+  .founder-name-block { margin-bottom: 32px; }
+  .founder-name { font-family: 'Inter Tight', sans-serif; font-weight: 800; color: var(--indigo); font-size: clamp(32px,3.5vw,44px); letter-spacing: -0.025em; line-height: 1.05; margin: 0 0 6px; }
+  .founder-title { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--gray); }
+
+  .founder-story { display: flex; flex-direction: column; gap: 20px; }
+  .founder-story p { font-size: clamp(15px,1.35vw,17.5px); line-height: 1.75; color: var(--gray); }
+  .founder-story p strong { color: var(--indigo); font-weight: 700; }
+
+  .founder-quote-pull {
+    border-left: 3px solid var(--peri);
+    padding-left: 24px;
+    margin: 8px 0;
+  }
+  .founder-quote-pull p {
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 500;
+    font-size: clamp(19px,1.9vw,23px);
+    color: var(--indigo);
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+  }
+
+  /* ============ NUMBERS STRIP ============ */
+  .numbers-strip { background: var(--indigo); padding: clamp(40px,5vw,64px) 0; }
+  .numbers-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+  @media (max-width: 640px) { .numbers-grid { grid-template-columns: 1fr; } }
+  .num-block { text-align: center; padding: clamp(24px,3vw,40px) 24px; }
+  .num-block + .num-block { border-left: 1px solid rgba(255,255,255,0.1); }
+  @media (max-width: 640px) { .num-block + .num-block { border-left: 0; border-top: 1px solid rgba(255,255,255,0.1); } }
+  .num-value { font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: clamp(40px,5.5vw,64px); color: var(--white); letter-spacing: -0.02em; line-height: 1; margin-bottom: 8px; }
+  .num-value .accent { color: var(--peri); }
+  .num-label { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: rgba(255,255,255,0.55); }
+
+  /* ============ ORIGIN STORY TIMELINE ============ */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .tl-item { display: grid; grid-template-columns: 80px 1fr; gap: 24px; position: relative; }
+  .tl-item:not(:last-child)::before { content: ''; position: absolute; left: 39px; top: 40px; bottom: -24px; width: 2px; background: var(--indigo-10); z-index: 0; }
+  .tl-marker { display: flex; flex-direction: column; align-items: center; gap: 8px; padding-top: 4px; position: relative; z-index: 1; }
+  .tl-dot { width: 14px; height: 14px; border-radius: 50%; background: var(--indigo); flex-shrink: 0; }
+  .tl-year { font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 13px; color: var(--indigo); letter-spacing: -0.01em; white-space: nowrap; }
+  .tl-body { padding: 0 0 clamp(32px,4vw,48px); }
+  .tl-body h3 { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: clamp(18px,1.8vw,22px); color: var(--indigo); margin-bottom: 10px; letter-spacing: -0.015em; }
+  .tl-body p { font-size: clamp(15px,1.3vw,16.5px); line-height: 1.7; color: var(--gray); }
+  .tl-tag { display: inline-block; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--indigo); background: var(--peri-20); padding: 4px 10px; border-radius: 4px; margin-bottom: 10px; }
+
+  /* ============ VALUES GRID ============ */
+  .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+  @media (max-width: 900px) { .values-grid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 560px) { .values-grid { grid-template-columns: 1fr; } }
+  .value-card { background: var(--white); border: 1px solid var(--indigo-10); border-radius: var(--r-card); padding: 28px 24px; display: flex; flex-direction: column; gap: 12px; transition: border-color .2s ease, transform .2s ease; }
+  .value-card:hover { border-color: var(--indigo-20); transform: translateY(-2px); }
+  .value-icon { width: 36px; height: 36px; display: flex; align-items: center; justify-content: center; color: var(--indigo); }
+  .value-icon svg { width: 26px; height: 26px; stroke-width: 1.5; }
+  .value-card h3 { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: clamp(16px,1.5vw,19px); color: var(--indigo); letter-spacing: -0.015em; line-height: 1.2; margin: 0; }
+  .value-card p { font-size: 14px; color: var(--gray); line-height: 1.65; margin: 0; }
+
+  /* ============ FINAL CTA ============ */
+  .final-cta { background: var(--indigo); color: var(--white); padding: clamp(48px,6vw,80px) 0; }
+  .final-cta h2 { color: var(--white); max-width: 22ch; }
+  .final-cta .sub { color: var(--peri); margin: 24px 0 36px; max-width: 50ch; font-size: clamp(17px,1.5vw,20px); }
+
+  /* ============ SCARCITY BANNER ============ */
+  .scarcity-bar {
+    background: var(--tint);
+    border: 1px solid var(--indigo-15);
+    border-radius: var(--r-card);
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 36px;
+    flex-wrap: wrap;
+  }
+  .scarcity-dot { width: 10px; height: 10px; border-radius: 50%; background: #4CAF50; flex-shrink: 0; box-shadow: 0 0 0 3px rgba(76,175,80,0.2); animation: pulse-green 2s ease-in-out infinite; }
+  @keyframes pulse-green { 0%,100% { box-shadow: 0 0 0 3px rgba(76,175,80,0.2); } 50% { box-shadow: 0 0 0 6px rgba(76,175,80,0.08); } }
+  .scarcity-text { font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(15px,1.4vw,17px); color: var(--indigo); line-height: 1.35; letter-spacing: -0.01em; }
+  .scarcity-text strong { font-weight: 700; color: var(--indigo); }
+
+  /* ============ FOOTER ============ */
+  footer { background: var(--white); border-top: 1px solid var(--indigo-10); padding: 40px 0; }
+  .foot-inner { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .foot-copy { color: var(--gray); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="wordmark" aria-label="The Last Lever, home">
+      <img src="https://shopfresko.com/cdn/shop/files/Untitled_design_3.png?v=1780009987&width=64" alt="The Last Lever icon" style="display:block;height:30px;width:auto;">
+      <span>The Last Lever</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="process.html">Our Process</a></li>
+      </ul>
+    </nav>
+    <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">About</p>
+      <h1>Built by a founder who lived the problem.</h1>
+      <p class="lead" style="margin-top:24px;">Peter didn't start The Last Lever as an agency. He started it because he spent years figuring out how to make his own brand genuinely profitable - and realised almost no one was teaching it properly.</p>
+    </div>
+  </section>
+
+  <!-- ============ NUMBERS STRIP ============ -->
+  <div class="numbers-strip">
+    <div class="container">
+      <div class="numbers-grid">
+        <div class="num-block">
+          <div class="num-value"><span class="accent">$2.5M</span></div>
+          <div class="num-label">Monthly revenue at peak (Ozzi Gear)</div>
+        </div>
+        <div class="num-block">
+          <div class="num-value">8-12<span class="accent" style="font-size:0.6em;vertical-align:super;margin-left:2px;">wks</span></div>
+          <div class="num-label">Typical time to measurable results</div>
+        </div>
+        <div class="num-block">
+          <div class="num-value"><span class="accent">$0</span></div>
+          <div class="num-label">Extra ad spend required</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOUNDER SECTION ============ -->
+  <section>
+    <div class="container">
+      <div class="founder-grid">
+
+        <!-- Photo column -->
+        <div class="founder-img-wrap">
+          <div class="founder-photo-area">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXbGggGAYSZ-zTPwhkkJzSoFvSaJ5QstsooQ&s" alt="Peter, founder of The Last Lever" style="width:100%;height:100%;object-fit:cover;border-radius:var(--r-card);">
+          </div>
+          <div class="stat-badge">
+            <div class="stat-badge-num">+$100K</div>
+            <div class="stat-badge-label">Profit, $0 extra ad spend</div>
+          </div>
+        </div>
+
+        <!-- Content column -->
+        <div class="founder-content">
+          <div class="founder-name-block">
+            <h2 class="founder-name">Peter</h2>
+            <p class="founder-title">Founder, The Last Lever</p>
+          </div>
+
+          <div class="founder-story">
+            <p>Peter co-founded Ozzi Gear and spent years scaling it the way most DTC founders do: more ad spend, more channels, more complexity. Revenue grew. <strong>Profit didn't keep up.</strong></p>
+
+            <div class="founder-quote-pull">
+              <p>"We were doing $1.5M a month and I still felt like we were running to stand still. The ads were working. The margin wasn't."</p>
+            </div>
+
+            <p>So he started pulling the site apart. Not redesigning it - <strong>testing it</strong>. Methodically changing what the page said, how it said it, and who it said it to. Persona-targeted landing pages. Sharper offer structures. Conversion flows that matched the way customers actually thought.</p>
+
+            <p>Within three months, Ozzi Gear went from $1.5M to $2M a month in revenue. Monthly profit jumped from $300K to $400K - <strong>$100K more every month, with zero new ad spend.</strong> The same traffic, the same budget, a fundamentally better store.</p>
+
+            <p>By the time revenue hit $2.5M a month, Peter had a repeatable system. Not a playbook that worked for one brand, but a methodology built around <strong>how DTC customers make decisions</strong> and how to convert that into bottom-line profit.</p>
+
+            <p>He built The Last Lever to give other ambitious founders access to that same system. Not as a massive agency with 40 clients and a junior account manager on your account - but as a <strong>small, focused team</strong> that treats your brand the way Peter treated his own.</p>
+          </div>
+
+          <div class="scarcity-bar">
+            <span class="scarcity-dot"></span>
+            <p class="scarcity-text">We take on <strong>4 new clients per month</strong> - to make sure every brand gets the attention it deserves. <strong>2 spots remaining in June.</strong></p>
+          </div>
+
+          <div style="margin-top:32px;">
+            <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ORIGIN TIMELINE ============ -->
+  <section class="tinted">
+    <div class="container">
+      <div style="margin-bottom:48px;">
+        <p class="eyebrow">The journey</p>
+        <h2>How the system was built.</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-year">Year 1</div>
+          </div>
+          <div class="tl-body">
+            <span class="tl-tag">The beginning</span>
+            <h3>Ozzi Gear launches. Revenue grows fast. Profit doesn't.</h3>
+            <p>Peter co-founds Ozzi Gear and scales it aggressively through paid media. The brand grows quickly - but as ad costs rise and margins compress, the business starts feeling like a treadmill. Revenue on the dashboard. Not enough profit in the bank.</p>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-year">Year 2</div>
+          </div>
+          <div class="tl-body">
+            <span class="tl-tag">Scaling up</span>
+            <h3>Ozzi scales ads hard. Revenue grows. Profits plateau.</h3>
+            <p>Peter doubles down on paid media. Ozzi Gear continues to grow and ad spend climbs with it. But something doesn't add up - the more he spends, the more profits seem to flatten. Revenue on the dashboard looks great. The margin tells a different story.</p>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-year">Year 3</div>
+          </div>
+          <div class="tl-body">
+            <span class="tl-tag">The breakthrough</span>
+            <h3>$1.5M to $2M/month. +$100K profit. Zero extra ad spend.</h3>
+            <p>The testing system delivers. In three months, revenue climbs from $1.5M to $2M per month. Monthly profit goes from $300K to $400K - with no increase in ad budget. The same traffic, converting at a fundamentally higher rate because the store is finally telling the right story to the right people.</p>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-marker">
+            <div class="tl-dot"></div>
+            <div class="tl-year">Now</div>
+          </div>
+          <div class="tl-body">
+            <span class="tl-tag">The Last Lever</span>
+            <h3>Giving other founders the same edge.</h3>
+            <p>The Last Lever is the system Peter built, applied to your brand. Not a templated CRO service with button colour tests and generic recommendations - a profit-first methodology built by someone who used it to add $100K a month to their own bottom line. We take on a small number of clients each month because that's the only way to do it properly.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VALUES ============ -->
+  <section>
+    <div class="container">
+      <div style="margin-bottom:48px; max-width:52ch;">
+        <p class="eyebrow">How we work</p>
+        <h2>The principles behind every decision.</h2>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg>
+          </div>
+          <h3>Profit over vanity metrics</h3>
+          <p>Every test is filtered through one question: does this improve the bottom line? Not sessions, not clicks, not bounce rate. Profit.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <h3>Every brand gets a unique plan</h3>
+          <p>We start with a full audit of your store. No two brands get the same playbook because no two brands have the same conversion problem.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h2l2 5 2-7 2 5h2"/></svg>
+          </div>
+          <h3>Methodology, not guesswork</h3>
+          <p>High-velocity testing with a 60% win rate. Every test is a hypothesis, not a hunch. Winners stay live and compound. Losers teach us something.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Brand-safe CRO</h3>
+          <p>We sharpen the story your site tells. We don't replace it. Your brand should come out of this feeling more like itself, not like a conversion machine.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Small client base, by design</h3>
+          <p>We cap the number of brands we work with each month. That's not a sales tactic - it's how we make sure your brand gets the attention it deserves.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Results in 8-12 weeks</h3>
+          <p>Not 6-month retainers before you see anything. We're structured to move fast: full audit in week one, first tests live in week two, results you can measure before the quarter ends.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final-cta">
+    <div class="container">
+      <p class="eyebrow on-indigo">Work with us</p>
+      <h2>Ready to find your last lever?</h2>
+      <p class="sub">Book a free 45-minute strategy session. Peter will walk through your store, identify your highest-impact opportunities, and give you a clear plan - whether you work with us or not.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-inverse btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
+        <a href="process.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.25);color:var(--white);">See our process <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container foot-inner">
+    <div>
+      <div class="wordmark">
+        <img src="https://shopfresko.com/cdn/shop/files/Untitled_design_3.png?v=1780009987&width=64" alt="The Last Lever icon" style="display:block;height:30px;width:auto;">
+        <span>The Last Lever</span>
+      </div>
+    </div>
+    <p class="foot-copy">©2026 The Last Lever. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

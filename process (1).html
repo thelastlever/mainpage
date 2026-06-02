@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Process - The Last Lever</title>
+<meta name="description" content="How The Last Lever delivers 25% more profit in 8-12 weeks. A four-phase system built on a full-store audit, profit-first testing, and compounding wins." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://shopfresko.com/cdn/shop/files/Untitled_design_3.png?v=1780009987&width=64">
+<style>
+  /* ============ TOKENS ============ */
+  :root {
+    --indigo: #2D2A6E;
+    --peri: #8B95E8;
+    --white: #FFFFFF;
+    --gray: #5F5E5A;
+    --indigo-04: rgba(45,42,110,0.04);
+    --indigo-06: rgba(45,42,110,0.06);
+    --indigo-08: rgba(45,42,110,0.08);
+    --indigo-10: rgba(45,42,110,0.10);
+    --indigo-15: rgba(45,42,110,0.15);
+    --indigo-20: rgba(45,42,110,0.20);
+    --peri-12: rgba(139,149,232,0.12);
+    --peri-20: rgba(139,149,232,0.20);
+    --max: 1200px;
+    --pad-x: clamp(20px,4vw,48px);
+    --pad-y: clamp(56px,7vw,96px);
+    --tint: #F4F5FC;
+    --r-card: 12px;
+    --r-btn: 8px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--white); color: var(--gray); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.65; font-weight: 400; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
+  img, svg { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; border: 0; background: none; }
+  h1, h2, h3, h4 { font-family: 'Inter Tight', sans-serif; color: var(--indigo); margin: 0; }
+  h1 { font-weight: 800; font-size: clamp(40px,6.6vw,72px); letter-spacing: -0.025em; line-height: 1.05; }
+  h2 { font-weight: 800; font-size: clamp(32px,4.6vw,56px); letter-spacing: -0.02em; line-height: 1.1; }
+  h3 { font-weight: 500; font-size: clamp(20px,2vw,24px); letter-spacing: -0.015em; line-height: 1.25; }
+  p { margin: 0; }
+  .lead { font-size: clamp(16px,1.4vw,19px); line-height: 1.6; color: var(--gray); max-width: 56ch; }
+  .eyebrow { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--indigo); margin: 0 0 20px; display: inline-block; }
+  .eyebrow.on-indigo { color: var(--peri); }
+  .container { width: 100%; max-width: var(--max); margin: 0 auto; padding-left: var(--pad-x); padding-right: var(--pad-x); }
+  section { padding: var(--pad-y) 0; }
+  section.tinted { background: var(--tint); }
+
+  /* ============ BUTTONS ============ */
+  .btn { display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.01em; padding: 12px 22px; border-radius: var(--r-btn); transition: transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease; white-space: nowrap; line-height: 1; }
+  .btn-lg { font-size: 17.5px; padding: 15px 27px; }
+  .btn .arr { transition: transform .18s ease; }
+  .btn:hover .arr { transform: translateX(3px); }
+  .btn-primary { background: var(--indigo); color: var(--white); }
+  .btn-primary:hover { background: #25225c; }
+  .btn-secondary { background: transparent; color: var(--indigo); border: 1px solid var(--indigo-20); }
+  .btn-secondary:hover { background: var(--indigo-04); }
+  .btn-inverse { background: var(--white); color: var(--indigo); }
+  .btn-inverse:hover { background: #f1f1fb; }
+
+  /* ============ NAV ============ */
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--white); border-bottom: 1px solid var(--indigo-08); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 24px; }
+  .wordmark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .wordmark img { flex-shrink: 0; display: block; }
+  .wordmark span { font-family: 'Inter Tight', sans-serif; font-weight: 700; color: var(--indigo); font-size: 18px; letter-spacing: -0.02em; white-space: nowrap; line-height: 1; align-self: center; }
+  .nav-links { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; }
+  .nav-links a { font-family: 'Inter', sans-serif; font-weight: 500; font-size: 14px; color: var(--indigo); transition: opacity .15s ease; }
+  .nav-links a:hover { opacity: .65; }
+  .nav-links a.active { font-weight: 700; opacity: 1; }
+  @media (max-width: 768px) { .nav-links { display: none; } }
+
+  /* ============ PAGE HERO ============ */
+  .page-hero { padding: clamp(48px,6vw,80px) 0 clamp(32px,4vw,56px); }
+
+  /* ============ PHASE STEPS ============ */
+  .phase { display: grid; grid-template-columns: 200px 1fr; gap: clamp(32px,5vw,64px); padding: clamp(40px,5vw,64px) 0; border-top: 1px solid var(--indigo-08); align-items: start; }
+  @media (max-width: 860px) { .phase { grid-template-columns: 1fr; gap: 24px; } }
+
+  .phase-label-col { position: sticky; top: 96px; }
+  @media (max-width: 860px) { .phase-label-col { position: static; } }
+
+  .phase-number { font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: clamp(56px,7vw,80px); color: var(--indigo-08); letter-spacing: -0.03em; line-height: 0.9; margin-bottom: 4px; }
+  .phase-tag { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--indigo); }
+  .phase-week { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gray); opacity: 0.65; margin-top: 6px; }
+
+  .phase-content h2 { font-size: clamp(24px,2.8vw,34px); margin-bottom: 16px; }
+  .phase-content .phase-intro { font-size: clamp(16px,1.4vw,18.5px); line-height: 1.7; color: var(--gray); margin-bottom: 32px; max-width: 58ch; }
+
+  .phase-steps { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+  .phase-step { background: var(--tint); border: 1px solid var(--indigo-10); border-radius: var(--r-card); padding: 24px; display: flex; gap: 20px; align-items: flex-start; }
+  .step-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--indigo); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--white); }
+  .step-icon svg { width: 18px; height: 18px; stroke-width: 1.8; }
+  .step-body h4 { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: clamp(15px,1.4vw,17px); color: var(--indigo); letter-spacing: -0.01em; margin-bottom: 6px; }
+  .step-body p { font-size: 14px; color: var(--gray); line-height: 1.65; }
+
+  .phase-output { background: var(--indigo-04); border: 1px solid var(--indigo-15); border-radius: var(--r-card); padding: 20px 24px; display: flex; gap: 16px; align-items: flex-start; }
+  .output-label { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--indigo); margin-bottom: 4px; opacity: 0.7; }
+  .output-text { font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(14px,1.3vw,16px); color: var(--indigo); line-height: 1.4; letter-spacing: -0.01em; }
+
+  /* ============ WHAT THIS IS NOT ============ */
+  .not-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 640px) { .not-grid { grid-template-columns: 1fr; } }
+  .not-card { border-radius: var(--r-card); padding: 28px; }
+  .not-card.bad { background: rgba(200,50,50,0.04); border: 1px solid rgba(200,50,50,0.12); }
+  .not-card.good { background: var(--tint); border: 1px solid var(--indigo-15); }
+  .not-card-head { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+  .not-icon { width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .not-icon.bad-icon { background: rgba(200,50,50,0.1); color: rgba(180,40,40,0.8); }
+  .not-icon.good-icon { background: rgba(76,175,80,0.12); color: rgba(56,142,60,0.9); }
+  .not-icon svg { width: 16px; height: 16px; stroke-width: 2.2; }
+  .not-card h3 { font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: clamp(16px,1.5vw,18px); color: var(--indigo); letter-spacing: -0.015em; }
+  .not-card ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .not-card ul li { font-size: 14px; color: var(--gray); line-height: 1.5; padding-left: 20px; position: relative; }
+  .not-card ul li::before { content: ''; position: absolute; left: 0; top: 8px; width: 6px; height: 6px; border-radius: 50%; }
+  .not-card.bad ul li::before { background: rgba(200,50,50,0.4); }
+  .not-card.good ul li::before { background: var(--peri); }
+
+  /* ============ SCARCITY ============ */
+  .scarcity-bar {
+    background: var(--tint);
+    border: 1px solid var(--indigo-15);
+    border-radius: var(--r-card);
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .scarcity-dot { width: 10px; height: 10px; border-radius: 50%; background: #4CAF50; flex-shrink: 0; box-shadow: 0 0 0 3px rgba(76,175,80,0.2); animation: pulse-green 2s ease-in-out infinite; }
+  @keyframes pulse-green { 0%,100% { box-shadow: 0 0 0 3px rgba(76,175,80,0.2); } 50% { box-shadow: 0 0 0 6px rgba(76,175,80,0.08); } }
+  .scarcity-text { font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: clamp(15px,1.4vw,17px); color: var(--indigo); line-height: 1.35; letter-spacing: -0.01em; }
+  .scarcity-text strong { font-weight: 700; color: var(--indigo); }
+
+  /* ============ FINAL CTA ============ */
+  .final-cta { background: var(--indigo); color: var(--white); padding: clamp(48px,6vw,80px) 0; }
+  .final-cta h2 { color: var(--white); max-width: 22ch; }
+  .final-cta .sub { color: var(--peri); margin: 24px 0 36px; max-width: 50ch; font-size: clamp(17px,1.5vw,20px); }
+
+  /* ============ FOOTER ============ */
+  footer { background: var(--white); border-top: 1px solid var(--indigo-10); padding: 40px 0; }
+  .foot-inner { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+  .foot-copy { color: var(--gray); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="wordmark" aria-label="The Last Lever, home">
+      <img src="https://shopfresko.com/cdn/shop/files/Untitled_design_3.png?v=1780009987&width=64" alt="The Last Lever icon" style="display:block;height:30px;width:auto;">
+      <span>The Last Lever</span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li><a href="process.html" class="active">Our Process</a></li>
+      </ul>
+    </nav>
+    <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call <span class="arr" aria-hidden="true">→</span></a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Our Process</p>
+      <h1>How we add 25% to your profit.</h1>
+      <p class="lead" style="margin-top:24px; max-width:52ch;">Most CRO is guesswork wrapped in reports. Ours is a four-phase system built around one metric: your profit. Here's exactly what happens when you work with us.</p>
+      <div style="margin-top:36px; display:flex; gap:12px; flex-wrap:wrap; align-items:center;">
+        <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
+        <a href="about.html" class="btn btn-secondary btn-lg">Meet the founder <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT THIS IS NOT ============ -->
+  <section class="tinted">
+    <div class="container">
+      <div style="margin-bottom:40px; max-width:52ch;">
+        <p class="eyebrow">Let's be clear</p>
+        <h2>Most agencies. And then there's us.</h2>
+      </div>
+      <div class="not-grid">
+        <div class="not-card bad">
+          <div class="not-card-head">
+            <div class="not-icon bad-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <h3>Most agencies</h3>
+          </div>
+          <ul>
+            <li>Take on anyone. Attention spread thinly, low results.</li>
+            <li>Junior account managers on your account</li>
+            <li>Same template applied to every brand</li>
+            <li>Optimise for revenue, not profit</li>
+            <li>Lock you into 6-month contracts upfront</li>
+          </ul>
+        </div>
+        <div class="not-card good">
+          <div class="not-card-head">
+            <div class="not-icon good-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3>The Last Lever</h3>
+          </div>
+          <ul>
+            <li>4 new clients per month, max</li>
+            <li>Seniors work your account directly</li>
+            <li>Custom audit and strategy for every brand</li>
+            <li>Every decision is filtered through profit</li>
+            <li>Results in 8-12 weeks or we haven't done our job</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE FOUR PHASES ============ -->
+  <section>
+    <div class="container">
+      <div style="margin-bottom:16px; max-width:52ch;">
+        <p class="eyebrow">The Lever Method</p>
+        <h2>Four phases. One outcome: more profit.</h2>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- PHASE 1 -->
+      <div class="phase">
+        <div class="phase-label-col">
+          <div class="phase-number">01</div>
+          <div class="phase-tag">Profit Audit</div>
+          <div class="phase-week">Days 1-3</div>
+        </div>
+        <div class="phase-content">
+          <h2>Find where the profit is leaking.</h2>
+          <p class="phase-intro">In the first three days, we do a full audit of your store, ad account, funnels, and any online presence you have. Not from a template, but from scratch - to identify where customers drop off, where the offer is weak, and where the highest-impact opportunities are hiding.</p>
+          <div class="phase-steps">
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16l4-4 4 4 4-6"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>Conversion funnel analysis</h4>
+                <p>We map every stage of your funnel - ad landing, product pages, cart, checkout - and identify the exact drop-off points costing you profit. We look at heatmaps, scroll depth, session recordings, and exit data.</p>
+              </div>
+            </div>
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>Identifying the heat points</h4>
+                <p>What's leaking profit right now. What can be fixed straight away. What's going to take more time. We map it all out clearly so you know exactly where you stand and what gets tackled first.</p>
+              </div>
+            </div>
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>Offer and messaging</h4>
+                <p>When you've been looking at your business for so long, everything starts to look the same. We come in with fresh eyes and fresh ideas - an outsized perspective that spots what you've stopped seeing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="phase-output">
+            <div>
+              <div class="output-label">Phase 1 output</div>
+              <div class="output-text">A prioritised profit audit report - your store's highest-impact opportunities ranked by expected uplift and effort. This is your roadmap for everything that follows.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 2 -->
+      <div class="phase">
+        <div class="phase-label-col">
+          <div class="phase-number">02</div>
+          <div class="phase-tag">Hypothesis Build</div>
+          <div class="phase-week">By End of Week 1</div>
+        </div>
+        <div class="phase-content">
+          <h2>Build the test plan around your profit gaps.</h2>
+          <p class="phase-intro">By the end of week one, you have a full hypothesis build in your hands. Every test is documented with what we're changing, why we believe it'll move profit, and how we'll know if it worked. No guesswork, no gut feel - every test earns its place before it goes live.</p>
+          <div class="phase-steps">
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>Hypothesis framework</h4>
+                <p>Each test is documented as: current state → observed problem → proposed change → expected impact on profit. Every hypothesis is tied directly to an insight from Phase 1.</p>
+              </div>
+            </div>
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>Built around your brand's specific needs</h4>
+                <p>Every brand is different. Maybe it's landing pages, maybe it's the checkout flow, maybe it's something else entirely. We don't apply a one-size-fits-all fix - we identify exactly what your brand needs and act on that.</p>
+              </div>
+            </div>
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>Brand-safe design and copy</h4>
+                <p>All variants are built to look and feel like your brand - we sharpen the story, we don't replace it. Every word and design choice is grounded in how your brand already talks to its customers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="phase-output">
+            <div>
+              <div class="output-label">Phase 2 output</div>
+              <div class="output-text">A test backlog of 6-10 prioritised hypotheses, plus completed designs and copy for the first 2-3 tests. Ready to go live.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 3 -->
+      <div class="phase">
+        <div class="phase-label-col">
+          <div class="phase-number">03</div>
+          <div class="phase-tag">Live Testing</div>
+          <div class="phase-week">Week 2+</div>
+        </div>
+        <div class="phase-content">
+          <h2>Test fast. Lock winners. Repeat.</h2>
+          <p class="phase-intro">From week two we start building - landing pages, checkout flows, or whatever your brand needs. Tests go live at high velocity with a 60% win rate. Every winning variant is made permanent and keeps earning from that point forward. The gains stack.</p>
+          <div class="phase-steps">
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M7 8h2l2 5 2-7 2 5h2"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>High-velocity A/B testing</h4>
+                <p>We run multiple tests simultaneously across your key pages. Each test is statistically significant before we call a winner - no premature conclusions, no false positives. Typically 2-4 tests running at any given time.</p>
+              </div>
+            </div>
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>Winners go permanent, immediately</h4>
+                <p>When a test wins, it's not shelved in a report. It's deployed as the new default within 24 hours. The uplift is locked in. It keeps earning every day from that point forward - your store gets permanently better.</p>
+              </div>
+            </div>
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>Weekly reporting</h4>
+                <p>Every week you receive a clear summary: what's live, what's winning, what's next, and what your profit impact looks like so far. No jargon, no dashboards you need training to read. One page, the numbers that matter.</p>
+              </div>
+            </div>
+          </div>
+          <div class="phase-output">
+            <div>
+              <div class="output-label">Phase 3 output</div>
+              <div class="output-text">Measurable profit uplift by week 8-12. Winning variants live and compounding. A test backlog that keeps improving with every round.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PHASE 4 -->
+      <div class="phase">
+        <div class="phase-label-col">
+          <div class="phase-number">04</div>
+          <div class="phase-tag">Compounding</div>
+          <div class="phase-week">Week 12+</div>
+        </div>
+        <div class="phase-content">
+          <h2>The gains stack. The store keeps getting better.</h2>
+          <p class="phase-intro">CRO isn't a project - it's a permanent competitive edge. By week 12, your store is already a better version of itself. Phase 4 is about turning that momentum into a compounding advantage that your competitors can't catch up to.</p>
+          <div class="phase-steps">
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>Compounding wins</h4>
+                <p>Each winning test raises your conversion baseline. The next test starts from a higher floor. Over 6 months, brands that started at 2.5% conversion are often at 3.5%+ - that's 40% more revenue from the same ad spend, locked in permanently.</p>
+              </div>
+            </div>
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>Expanding test surface</h4>
+                <p>As we learn what works for your brand and your customers, we expand into new areas: upsell and cross-sell flows, post-purchase sequences, AOV optimisation, and new acquisition landing pages.</p>
+              </div>
+            </div>
+            <div class="phase-step">
+              <div class="step-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+              </div>
+              <div class="step-body">
+                <h4>A store that outlasts any campaign</h4>
+                <p>Ads stop the moment you stop paying for them. Your store doesn't. Every improvement we make is permanent infrastructure - it earns profit on every single visitor, from every channel, forever.</p>
+              </div>
+            </div>
+          </div>
+          <div class="phase-output">
+            <div>
+              <div class="output-label">Phase 4 outcome</div>
+              <div class="output-text">A permanently better store that compounds profit over time - not a one-time campaign spike. The brands that stay with us longest see the biggest returns.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ WHO THIS IS FOR ============ -->
+  <section class="tinted">
+    <div class="container">
+      <div style="margin-bottom:40px; max-width:52ch;">
+        <p class="eyebrow">Is this right for you?</p>
+        <h2>We're built for brands doing $250K+ a month.</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <div style="background:var(--white);border:1px solid var(--indigo-10);border-radius:var(--r-card);padding:32px;">
+          <p style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;color:var(--indigo);margin-bottom:20px;opacity:0.6;">You're a good fit if…</p>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#4CAF50;font-size:16px;line-height:1.4;flex-shrink:0;">✓</span><p style="font-size:15px;color:var(--gray);line-height:1.6;">You're doing $250K+ per month and revenue is growing, but profit margins feel thin</p></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#4CAF50;font-size:16px;line-height:1.4;flex-shrink:0;">✓</span><p style="font-size:15px;color:var(--gray);line-height:1.6;">You're spending heavily on ads and they're working - but you want more out of the traffic you're already paying for</p></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#4CAF50;font-size:16px;line-height:1.4;flex-shrink:0;">✓</span><p style="font-size:15px;color:var(--gray);line-height:1.6;">You tried CRO before and it didn't move the needle - and you want to understand why this is different</p></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:#4CAF50;font-size:16px;line-height:1.4;flex-shrink:0;">✓</span><p style="font-size:15px;color:var(--gray);line-height:1.6;">You care as much about profit as revenue - and you want a partner who thinks the same way</p></div>
+          </div>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--indigo-10);border-radius:var(--r-card);padding:32px;">
+          <p style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);margin-bottom:20px;opacity:0.6;">Probably not right if…</p>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:rgba(200,50,50,0.6);font-size:16px;line-height:1.4;flex-shrink:0;">✗</span><p style="font-size:15px;color:var(--gray);line-height:1.6;">You're under $100K/month - the traffic volume needed to run statistically valid tests isn't there yet</p></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:rgba(200,50,50,0.6);font-size:16px;line-height:1.4;flex-shrink:0;">✗</span><p style="font-size:15px;color:var(--gray);line-height:1.6;">You want a full-service agency to run your ads, email, and social as well - that's not us</p></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:rgba(200,50,50,0.6);font-size:16px;line-height:1.4;flex-shrink:0;">✗</span><p style="font-size:15px;color:var(--gray);line-height:1.6;">You want results in week one - our system is structured to deliver in 8-12 weeks, not overnight</p></div>
+            <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:rgba(200,50,50,0.6);font-size:16px;line-height:1.4;flex-shrink:0;">✗</span><p style="font-size:15px;color:var(--gray);line-height:1.6;">You're not willing to make changes to your store based on data - this only works if you trust the process</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>@media(max-width:640px){.container > div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr!important;}}</style>
+  </section>
+
+  <!-- ============ SCARCITY + CTA ============ -->
+  <section>
+    <div class="container">
+      <div style="max-width:640px; margin:0 auto; text-align:center;">
+        <p class="eyebrow">Ready to start?</p>
+        <h2>Book a free strategy session.</h2>
+        <p class="lead" style="margin:20px auto 32px; text-align:center;">In 45 minutes, Peter will walk through your store, identify your top 3 profit opportunities, and give you a clear plan - whether you work with us or not. No pitch, no pressure.</p>
+
+        <div class="scarcity-bar" style="margin-bottom:28px; justify-content:center;">
+          <span class="scarcity-dot"></span>
+          <p class="scarcity-text">We take on <strong>4 new clients per month.</strong> <strong>2 spots remaining in June.</strong></p>
+        </div>
+
+        <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final-cta">
+    <div class="container">
+      <p class="eyebrow on-indigo">The Lever Method</p>
+      <h2>Four phases. Measurable profit in 8-12 weeks.</h2>
+      <p class="sub">Book your free strategy session and get a clear picture of where your profit is leaking and how to fix it.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+        <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-inverse btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
+        <a href="about.html" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.25);color:var(--white);">Meet the founder <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container foot-inner">
+    <div>
+      <div class="wordmark">
+        <img src="https://shopfresko.com/cdn/shop/files/Untitled_design_3.png?v=1780009987&width=64" alt="The Last Lever icon" style="display:block;height:30px;width:auto;">
+        <span>The Last Lever</span>
+      </div>
+    </div>
+    <p class="foot-copy">©2026 The Last Lever. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
