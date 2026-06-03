@@ -1148,6 +1148,9 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     .faq-body { padding: 0 20px 22px; }
   }
 
+  @media (max-width: 640px) { .audit-cards { grid-template-columns: 1fr !important; } }
+  @media (max-width: 900px) { .audit-cards { grid-template-columns: 1fr 1fr !important; } }
+
   /* ============ FINAL CTA ============ */
   .final-cta {
     background: var(--indigo);
@@ -1200,7 +1203,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
       <ul class="nav-links">
       </ul>
     </nav>
-    <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary">Book a call <span class="arr" aria-hidden="true">→</span></a>
+    <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary">Free profit audit <span class="arr" aria-hidden="true">→</span></a>
   </div>
 </header>
 
@@ -1212,9 +1215,10 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
       <p class="eyebrow">Imagine if you added</p>
       <h1><span class="accent">25% more profit.</span><span class="underlined">$0 extra on ads.<svg class="hand-underline" viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M6 11 C70 5, 150 5, 210 8 C248 10, 280 9, 294 7" fill="none" stroke="#8B95E8" stroke-width="6" stroke-linecap="round"/></svg></span></h1>
       <div class="hero-cta-row">
-        <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
+        <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Get your free audit <span class="arr" aria-hidden="true">→</span></a>
         <a href="javascript:void(0)" onclick="document.getElementById('calculator').scrollIntoView({behavior:'smooth'})" class="btn btn-secondary" style="font-size:10.5px;padding:9px 17px;">Calculate your potential profit <span class="arr" aria-hidden="true">↓</span></a>
       </div>
+      <p style="margin-top:16px;font-size:13px;color:var(--gray);opacity:0.7;">45 minutes. A full breakdown. Free.</p>
     </div>
   </section>
 
@@ -1222,7 +1226,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
   <section class="vsl" aria-labelledby="vsl-heading">
     <div class="container">
       <div class="vsl-intro">
-        <h2 id="vsl-heading"><span class="vsl-line-small">Revenue looks good on your dashboard.</span><span style="color: var(--peri);">Profit looks good in your wallet.</span></h2>
+        <h2 id="vsl-heading"><span class="vsl-line-small">We'll find your profit leaks before you spend another dollar on ads.</span><span style="color: var(--peri);">Book a call. Get a full audit. Free.</span></h2>
         <!-- Partner logos -->
         <div class="partner-ticker-wrap">
           <div class="partner-ticker">
@@ -1362,7 +1366,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
   <section class="profit-quote-section" style="padding: 8px 0 24px;">
     <div class="container">
       <div class="profit-quote-btns">
-        <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
+        <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Get your free audit <span class="arr" aria-hidden="true">→</span></a>
         <a href="javascript:void(0)" onclick="document.getElementById('calculator').scrollIntoView({behavior:'smooth'})" class="btn btn-secondary btn-lg">Calculate your potential <span class="arr" aria-hidden="true">↓</span></a>
       </div>
     </div>
@@ -1373,7 +1377,7 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     <div class="cac-section-top">
       <div class="container">
         <p class="eyebrow" style="color:var(--peri);">Your acquisition cost</p>
-        <h2 style="color:var(--white);">See how we lower your CAC and lift your <span style="position:relative;display:inline-block;color:var(--peri);">profit<svg viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-2%;bottom:-0.15em;width:104%;height:0.3em;overflow:visible;pointer-events:none;"><path d="M3 6 C30 2, 60 2, 90 5 C105 6.5, 115 6, 117 5" fill="none" stroke="#8B95E8" stroke-width="3" stroke-linecap="round"/></svg></span>.</h2>
+        <h2 style="color:var(--white);">See how we lower your CAC by increasing your conversion rate and lift your <span style="position:relative;display:inline-block;color:var(--peri);">profit<svg viewBox="0 0 120 10" preserveAspectRatio="none" aria-hidden="true" style="position:absolute;left:-2%;bottom:-0.15em;width:104%;height:0.3em;overflow:visible;pointer-events:none;"><path d="M3 6 C30 2, 60 2, 90 5 C105 6.5, 115 6, 117 5" fill="none" stroke="#8B95E8" stroke-width="3" stroke-linecap="round"/></svg></span>.</h2>
         <p class="lead" style="color:var(--peri);">We reduce CAC by 10% on average within the first 90 days. Put your numbers in and see what that's worth.</p>
       </div>
     </div>
@@ -1511,53 +1515,6 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
   </div>
 
-  <!-- ============ THE NUMBERS ============ -->
-  <section id="numbers">
-    <div class="container">
-      <div class="section-head">
-        <p class="eyebrow">The numbers</p>
-        <h2>Scaling ads brings revenue. We bring you profit.</h2>
-      </div>
-
-      <div class="chart-wrap">
-        <svg viewBox="-10 0 820 360" role="img" aria-label="Line chart comparing monthly revenue with and without The Last Lever over six months. Without The Last Lever stays flat around $80K. With The Last Lever grows from $80K to $190K." xmlns="http://www.w3.org/2000/svg" style="width:100%; height:auto;">
-          <g stroke="#2D2A6E" stroke-opacity="0.08" stroke-width="1">
-            <line x1="70" y1="40" x2="780" y2="40"/>
-            <line x1="70" y1="100" x2="780" y2="100"/>
-            <line x1="70" y1="160" x2="780" y2="160"/>
-            <line x1="70" y1="220" x2="780" y2="220"/>
-            <line x1="70" y1="280" x2="780" y2="280"/>
-            <line x1="70" y1="320" x2="780" y2="320"/>
-          </g>
-          <g font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#5F5E5A">
-            <text x="60" y="44" text-anchor="end">$200K</text>
-            <text x="60" y="104" text-anchor="end">$160K</text>
-            <text x="60" y="164" text-anchor="end">$120K</text>
-            <text x="60" y="224" text-anchor="end">$80K</text>
-            <text x="60" y="284" text-anchor="end">$40K</text>
-            <text x="60" y="324" text-anchor="end">$0</text>
-          </g>
-          <line x1="70" y1="320" x2="780" y2="320" stroke="#2D2A6E" stroke-opacity="0.15" stroke-width="1"/>
-          <g font-family="Inter, sans-serif" font-size="22" font-weight="500" fill="#5F5E5A" text-anchor="middle">
-            <text x="130" y="345">Jan</text>
-            <text x="250" y="345">Feb</text>
-            <text x="370" y="345">Mar</text>
-            <text x="490" y="345">Apr</text>
-            <text x="610" y="345">May</text>
-            <text x="730" y="345">Jun</text>
-          </g>
-          <polyline points="130,220 250,222 370,218 490,221 610,219 730,220" fill="none" stroke="#5F5E5A" stroke-opacity="0.55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <polyline points="130,220 250,190 370,152 490,115 610,85 730,55" fill="none" stroke="#2D2A6E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="730" cy="55" r="7" fill="#8B95E8" stroke="#FFFFFF" stroke-width="2"/>
-        </svg>
-        <div class="chart-legend">
-          <div class="legend-item"><span class="legend-dot indigo"></span> With The Last Lever</div>
-          <div class="legend-item"><span class="legend-dot gray"></span> Without The Last Lever</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ FAQ ============ -->
   <section id="faq" class="tinted">
     <div class="container">
@@ -1638,13 +1595,44 @@ src="https://www.facebook.com/tr?id=3572930082861749&ev=PageView&noscript=1"
     </div>
   </section>
 
+  <!-- ============ PROFIT AUDIT ============ -->
+  <section class="tinted" id="audit">
+    <div class="container">
+      <div style="max-width:720px;margin:0 auto;text-align:center;">
+        <p class="eyebrow">The offer</p>
+        <h2>We'll find your profit leaks before you spend another dollar on ads.</h2>
+        <p class="lead" style="margin:24px auto 32px;max-width:58ch;">Book a 45-minute strategy call and we'll deliver a full audit of your store — conversion gaps, AOV leakage, checkout friction, and the three highest-impact changes you could make right now.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;" class="audit-cards">
+        <div style="background:var(--white);border:1px solid var(--indigo-10);border-radius:var(--r-card);padding:28px;">
+          <p style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(16px,1.4vw,19px);color:var(--indigo);margin-bottom:10px;">Conversion gaps</p>
+          <p style="font-size:14px;color:var(--gray);line-height:1.65;">Where visitors are dropping off and why. The pages costing you the most money right now.</p>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--indigo-10);border-radius:var(--r-card);padding:28px;">
+          <p style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(16px,1.4vw,19px);color:var(--indigo);margin-bottom:10px;">AOV & checkout friction</p>
+          <p style="font-size:14px;color:var(--gray);line-height:1.65;">Where your order value is leaking and what's stopping people from completing the purchase.</p>
+        </div>
+        <div style="background:var(--white);border:1px solid var(--indigo-10);border-radius:var(--r-card);padding:28px;">
+          <p style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(16px,1.4vw,19px);color:var(--indigo);margin-bottom:10px;">Three highest-impact moves</p>
+          <p style="font-size:14px;color:var(--gray);line-height:1.65;">Specific, actionable. Not generic CRO advice — exactly what we'd do to your store, in order of impact.</p>
+        </div>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--indigo-10);border-radius:var(--r-card);padding:clamp(28px,4vw,48px);max-width:720px;margin:0 auto;text-align:center;">
+        <p style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(18px,1.8vw,22px);color:var(--indigo);margin-bottom:12px;">No fluff. No generic recommendations.</p>
+        <p style="font-size:clamp(15px,1.3vw,17px);color:var(--gray);line-height:1.7;margin-bottom:28px;max-width:54ch;margin-left:auto;margin-right:auto;">You walk away with clarity either way. If we're the right fit, great. If not, you've still got a roadmap worth acting on.</p>
+        <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Get your free audit <span class="arr" aria-hidden="true">→</span></a>
+        <p style="margin-top:12px;font-size:12px;color:var(--gray);opacity:0.6;">45 minutes. A full breakdown. Free.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FINAL CTA ============ -->
   <section class="final-cta" id="contact">
     <div class="container">
       <p class="eyebrow on-indigo">Ready?</p>
-      <h2>Have we convinced you? Let us do the same for your brand.</h2>
-      <p class="sub">Book a free 45-minute strategy session. No fluff, just a clear plan.</p>
-      <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-inverse btn-lg">Book a call <span class="arr" aria-hidden="true">→</span></a>
+      <h2>We'll find your profit leaks before you spend another dollar on ads.</h2>
+      <p class="sub">45 minutes. A full breakdown. Free.</p>
+      <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn btn-inverse btn-lg">Get your free audit <span class="arr" aria-hidden="true">→</span></a>
     </div>
   </section>
 
