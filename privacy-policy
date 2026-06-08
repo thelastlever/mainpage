@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy | The Last Lever</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="https://shopfresko.com/cdn/shop/files/Untitled_design_4.png?v=1780554121&width=64">
+<style>
+  :root {
+    --black: #0A0A0A;
+    --blue: #4D6EF5;
+    --white: #FFFFFF;
+    --gray: rgba(255,255,255,0.5);
+    --border: rgba(255,255,255,0.08);
+    --max: 760px;
+    --pad-x: clamp(20px,4vw,48px);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--black); color: var(--white); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.75; -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  p { margin: 0 0 16px; }
+  h1,h2,h3 { font-family: 'Inter Tight', sans-serif; color: var(--white); margin: 0; }
+  h1 { font-weight: 800; font-size: clamp(28px,4vw,44px); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 8px; }
+  h2 { font-weight: 700; font-size: clamp(18px,2vw,22px); letter-spacing: -0.01em; margin: 40px 0 12px; }
+  h3 { font-weight: 600; font-size: 16px; margin: 24px 0 8px; }
+  .container { width: 100%; max-width: var(--max); margin: 0 auto; padding: 0 var(--pad-x); }
+
+  /* NAV */
+  .nav { position: sticky; top: 0; z-index: 50; background: var(--black); border-bottom: 1px solid var(--border); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .wordmark { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .wordmark span { font-family: 'Inter Tight', sans-serif; font-weight: 700; color: var(--white); font-size: 17px; letter-spacing: -0.02em; }
+  .nav-back { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.5); transition: color .18s; }
+  .nav-back:hover { color: var(--white); text-decoration: none; }
+
+  /* CONTENT */
+  .hero { padding: clamp(40px,5vw,64px) 0 clamp(32px,4vw,48px); border-bottom: 1px solid var(--border); }
+  .updated { font-size: 13px; color: var(--gray); margin-top: 8px; }
+  .content { padding: clamp(32px,4vw,56px) 0; }
+  .content p, .content li { color: var(--gray); font-size: 15px; line-height: 1.8; }
+  .content ul, .content ol { margin: 0 0 16px; padding-left: 24px; }
+  .content li { margin-bottom: 8px; }
+  .content a { color: var(--blue); }
+  .divider { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--border); padding: 28px 0; }
+  .foot-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+  .foot-copy { font-size: 13px; color: rgba(255,255,255,0.25); }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="/index.html" class="wordmark">
+      <img src="https://shopfresko.com/cdn/shop/files/Untitled_design_4.png?v=1780554121&width=64" alt="The Last Lever" style="height:26px;width:auto;">
+      <span>The Last Lever</span>
+    </a>
+    <a href="/index.html" class="nav-back">← Back to home</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: June 2026</p>
+    </div>
+  </section>
+
+  <section class="content">
+    <div class="container">
+
+      <p>This Privacy Policy describes how The Last Lever ("we", "us", or "our") collects, uses, and handles your information when you visit thelastlever.com or book a call with us.</p>
+
+      <h2>1. Information We Collect</h2>
+
+      <h3>Information you provide directly</h3>
+      <p>When you book a call via our Calendly scheduling link, you provide personal information including your name, email address, and any details you include in the booking form. This information is collected and stored by Calendly. Please refer to <a href="https://calendly.com/privacy" target="_blank" rel="noopener">Calendly's Privacy Policy</a> for details on how they handle your data.</p>
+
+      <h3>Information collected automatically</h3>
+      <p>When you visit our website, we automatically collect certain information about your device and browsing behaviour, including:</p>
+      <ul>
+        <li>IP address and approximate location</li>
+        <li>Browser type and version</li>
+        <li>Pages viewed and time spent on each page</li>
+        <li>Referring website or source</li>
+        <li>Device type (desktop, mobile, tablet)</li>
+      </ul>
+
+      <h3>Tracking technologies</h3>
+      <p>We use cookies and similar tracking technologies to collect information about your activity on our site. These include:</p>
+      <ul>
+        <li><strong style="color:var(--white);">Google Analytics (GA4)</strong> — We use Google Analytics to understand how visitors use our website. Google Analytics collects data such as pages visited, time on site, and traffic source. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</li>
+        <li><strong style="color:var(--white);">Meta Pixel</strong> — We use the Meta (Facebook) Pixel to measure the effectiveness of our advertising campaigns and to understand how users interact with our website after seeing our ads on Facebook and Instagram. This may include information about your interactions with our site being shared with Meta Platforms, Inc.</li>
+      </ul>
+
+      <hr class="divider">
+
+      <h2>2. How We Use Your Information</h2>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Schedule and conduct strategy calls with prospective clients</li>
+        <li>Understand how our website is being used and improve its performance</li>
+        <li>Measure the effectiveness of our advertising campaigns</li>
+        <li>Communicate with you about our services if you have requested this</li>
+        <li>Comply with our legal obligations</li>
+      </ul>
+
+      <hr class="divider">
+
+      <h2>3. How We Share Your Information</h2>
+      <p>We do not sell your personal information. We may share your information with third-party service providers who help us operate our business, including:</p>
+      <ul>
+        <li><strong style="color:var(--white);">Calendly</strong> — for scheduling calls</li>
+        <li><strong style="color:var(--white);">Google</strong> — for analytics (GA4)</li>
+        <li><strong style="color:var(--white);">Meta</strong> — for advertising measurement</li>
+        <li><strong style="color:var(--white);">Cloudflare</strong> — for website hosting and delivery</li>
+      </ul>
+      <p>These providers are only given access to information necessary to perform their services and are required to protect your information in accordance with applicable law.</p>
+      <p>We may also disclose your information if required to do so by law or in response to a valid legal request.</p>
+
+      <hr class="divider">
+
+      <h2>4. Data Retention</h2>
+      <p>We retain information collected through Google Analytics and Meta Pixel for as long as is necessary to fulfil the purposes described in this policy, or as required by law. Booking information held by Calendly is subject to their own retention policies.</p>
+
+      <hr class="divider">
+
+      <h2>5. Your Rights</h2>
+      <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+      <ul>
+        <li>The right to access the personal information we hold about you</li>
+        <li>The right to request correction of inaccurate information</li>
+        <li>The right to request deletion of your personal information</li>
+        <li>The right to object to or restrict certain processing of your information</li>
+        <li>The right to data portability</li>
+        <li>The right to withdraw consent where processing is based on consent</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us at <a href="mailto:admin@thelastlever.com">admin@thelastlever.com</a>.</p>
+
+      <hr class="divider">
+
+      <h2>6. Cookies</h2>
+      <p>Our website uses cookies to function properly and to provide analytics. By continuing to use our website, you consent to the use of cookies as described in this policy.</p>
+      <p>You can control cookies through your browser settings. Note that disabling certain cookies may affect the functionality of the website.</p>
+
+      <hr class="divider">
+
+      <h2>7. Third-Party Links</h2>
+      <p>Our website contains links to third-party websites, including Calendly and Vimeo. We are not responsible for the privacy practices of these sites and encourage you to review their privacy policies.</p>
+
+      <hr class="divider">
+
+      <h2>8. Children's Privacy</h2>
+      <p>Our website is not directed at children under the age of 16. We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately.</p>
+
+      <hr class="divider">
+
+      <h2>9. Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will post any changes on this page with an updated date. Your continued use of our website after any changes constitutes your acceptance of the revised policy.</p>
+
+      <hr class="divider">
+
+      <h2>10. Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy or how we handle your information, please contact us at:</p>
+      <p><strong style="color:var(--white);">The Last Lever</strong><br>
+      <a href="mailto:admin@thelastlever.com">admin@thelastlever.com</a></p>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container foot-inner">
+    <div class="wordmark">
+      <img src="https://shopfresko.com/cdn/shop/files/Untitled_design_4.png?v=1780554121&width=64" alt="The Last Lever" style="height:24px;width:auto;opacity:0.5;">
+      <span style="opacity:0.5;">The Last Lever</span>
+    </div>
+    <p class="foot-copy">©2026 The Last Lever. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
