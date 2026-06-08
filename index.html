@@ -203,33 +203,33 @@ fbq('track', 'PageView');
   <section id="teardown" class="section" style="border-bottom:1px solid var(--border);">
     <div class="container">
       <span class="case-tag" style="display:block;margin-bottom:16px;">Start here — it's free</span>
-      <h2 style="max-width:20ch;margin-bottom:16px;">We'll find your three biggest profit leaks before you pay us a cent.</h2>
-      <p style="color:var(--gray);font-size:15px;line-height:1.75;max-width:60ch;margin-bottom:48px;">Send us your URL and within 48 hours we'll send back a full recorded CRO audit of your store. No call required. No pitch. Yours to keep whether you hire us or not.</p>
+      <h2 style="max-width:26ch;margin-bottom:16px;">30 seconds from you. Your three biggest conversion leaks back in 48 hours.</h2>
+      <p style="color:var(--gray);font-size:15px;line-height:1.75;max-width:60ch;margin-bottom:48px;">Send your URL and we'll send back a recorded walkthrough of your actual store — the gaps costing you sales, and the fix for each. No call, no pitch. Yours to keep whether you hire us or not.</p>
 
       <div class="teardown-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:48px;">
         <div style="background:var(--black);padding:28px 24px;">
           <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:36px;color:var(--blue);letter-spacing:-0.02em;line-height:1;margin-bottom:16px;">1</div>
           <h3 style="margin-bottom:10px;">Send us your store</h3>
-          <p style="color:var(--gray);font-size:14px;line-height:1.75;">Your store, your details, and your revenue range. Takes 30 seconds, no long questionnaire.</p>
+          <p style="color:var(--gray);font-size:14px;line-height:1.75;">Your URL and revenue range. 30 seconds, no questionnaire.</p>
         </div>
         <div style="background:var(--black);padding:28px 24px;border-left:1px solid var(--border);border-right:1px solid var(--border);">
           <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:36px;color:var(--blue);letter-spacing:-0.02em;line-height:1;margin-bottom:16px;">2</div>
           <h3 style="margin-bottom:10px;">We run the audit</h3>
-          <p style="color:var(--gray);font-size:14px;line-height:1.75;">We screen-record your homepage, product pages, cart and checkout, and call out your three biggest profit leaks with the specific fix for each. Built for your store, not a template.</p>
+          <p style="color:var(--gray);font-size:14px;line-height:1.75;">We screen-record your store and pinpoint the three biggest leaks costing you conversions — each with the fix. Built for your store, not a template.</p>
         </div>
         <div style="background:var(--black);padding:28px 24px;">
           <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:36px;color:var(--blue);letter-spacing:-0.02em;line-height:1;margin-bottom:16px;">3</div>
           <h3 style="margin-bottom:10px;">You get the video in 48 hours</h3>
-          <p style="color:var(--gray);font-size:14px;line-height:1.75;">An 8-minute recorded walkthrough lands in your inbox. Watch it, share it with your team, action it yourself, or book a call and we'll map the fixes live together.</p>
+          <p style="color:var(--gray);font-size:14px;line-height:1.75;">An 8-minute walkthrough hits your inbox. Action it yourself, or book a call and we'll map it out live.</p>
         </div>
       </div>
 
-      <div id="teardown-intro">
-        <p style="font-size:15px;color:var(--white);font-weight:600;margin-bottom:6px;">Take this <span style="color:var(--blue);text-decoration:underline;text-underline-offset:3px;">30-second</span> form and get a full recorded CRO audit of your store.</p>
-        <p style="font-size:13px;color:var(--gray);margin-bottom:28px;">We'll record an 8-minute walkthrough of your actual site and send it to your inbox within 48 hours.</p>
+      <div id="teardown-intro" style="text-align:center;margin-bottom:32px;">
+        <h2 style="margin-bottom:12px;">Send your store. Get your audit in 48 hours.</h2>
+        <p style="font-size:15px;color:var(--gray);max-width:52ch;margin:0 auto;">Takes 30 seconds. We'll record an 8-minute walkthrough of your actual store and email it within 48 hours.</p>
       </div>
 
-      <form id="teardown-form" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:640px;" onsubmit="submitTeardown(event)">
+      <form id="teardown-form" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:0 auto;" onsubmit="submitTeardown(event)">
         <div style="display:flex;flex-direction:column;gap:6px;">
           <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);">Store URL</label>
           <input type="text" name="store_url" placeholder="yourstore.com" required style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;padding:12px 14px;color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color .18s;" onfocus="this.style.borderColor='rgba(77,110,245,0.6)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'">
@@ -265,14 +265,14 @@ fbq('track', 'PageView');
         </div>
       </form>
 
-      <div id="teardown-success" style="display:none;padding:32px;background:rgba(77,110,245,0.1);border:1px solid rgba(77,110,245,0.3);border-radius:8px;max-width:640px;margin-top:16px;">
+      <div id="teardown-success" style="display:none;padding:32px;background:rgba(77,110,245,0.1);border:1px solid rgba(77,110,245,0.3);border-radius:8px;max-width:520px;margin:16px auto 0;text-align:center;">
         <p style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);color:var(--white);margin-bottom:12px;">Perfect — your CRO audit's on the way.</p>
         <p style="font-size:15px;color:var(--gray);line-height:1.7;margin-bottom:24px;">We'll have the full breakdown back to you within 48 hours. Last step: lock in your call now and we'll walk you through every leak we find, live. Nothing to prepare — we do the work before we talk.</p>
         <a id="booking-btn" href="https://calendly.com/admin-thelastlever/strategy-call" target="_blank" rel="noopener" class="btn-main" onclick="if(typeof gtag==='function')gtag('event','booking_click');if(typeof fbq==='function')fbq('trackCustom','BookingClick');">Book my call <span class="arr">→</span></a>
         <p style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:10px;">Can't make it? You'll still get the recorded CRO audit either way.</p>
       </div>
 
-      <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-top:16px;max-width:54ch;">For brands doing $250K+/month only. Every CRO audit is genuine and built for your store, not a form letter. <span style="color:rgba(255,255,255,0.3);">Prefer to talk first?</span> <a href="https://calendly.com/admin-thelastlever/strategy-call" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Book a call →</a></p>
+      <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-top:16px;max-width:520px;margin-left:auto;margin-right:auto;text-align:center;">For brands doing $250K+/month only. Every CRO audit is genuine and built for your store, not a form letter. <span style="color:rgba(255,255,255,0.3);">Prefer to talk first?</span> <a href="https://calendly.com/admin-thelastlever/strategy-call" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Book a call →</a></p>
 
       <style>
         @media(max-width:560px){#teardown-form{grid-template-columns:1fr!important;}}
