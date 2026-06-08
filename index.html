@@ -23,8 +23,8 @@ fbq('track', 'PageView');
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>The Last Lever | CRO for DTC Brands</title>
-<meta name="description" content="We find your profit leaks before you spend another dollar on ads. Book a free 45-minute audit."/>
+<title>The Last Lever | Free CRO Audit for DTC Brands</title>
+<meta name="description" content="Get a free recorded CRO audit of your store in 48 hours. We find your biggest profit leaks and show you exactly how to fix them."/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -43,15 +43,9 @@ fbq('track', 'PageView');
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
-    margin: 0;
-    background: var(--black);
-    color: var(--white);
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
-    overscroll-behavior-x: none;
+    margin: 0; background: var(--black); color: var(--white);
+    font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden; overscroll-behavior-x: none;
   }
   img, svg { display: block; max-width: 100%; }
   a { color: inherit; text-decoration: none; }
@@ -72,9 +66,6 @@ fbq('track', 'PageView');
   .nav-btn:hover { background: #3d5ee0; }
   .nav-btn .arr { transition: transform .18s; }
   .nav-btn:hover .arr { transform: translateX(3px); }
-  .nav-reviews { font-family:'Inter',sans-serif; font-size:14px; font-weight:600; color:#fff; transition:opacity .18s; }
-  .nav-reviews:hover { opacity:0.7; }
-  @media (max-width: 480px) { .nav-reviews { display: none; } }
 
   /* HERO */
   .hero { padding: clamp(28px,3.5vw,44px) 0 8px; text-align: center; }
@@ -92,31 +83,10 @@ fbq('track', 'PageView');
   /* VSL */
   .vsl { padding: 0 0 clamp(40px,5vw,64px); border-bottom: 1px solid var(--border); }
   .vsl-player { max-width: 900px; margin: 0 auto; border-radius: 8px; overflow: hidden; }
-  .vsl-thumb {
-    position: relative; padding: 56.25% 0 0 0; cursor: pointer;
-  }
+  .vsl-thumb { position: relative; padding: 56.25% 0 0 0; cursor: pointer; }
   .vsl-thumb img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
-  .vsl-thumb .play-btn {
-    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);
-  }
-  .vsl-thumb .play-btn div {
-    width: 68px; height: 68px; border-radius: 50%; background: var(--blue);
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 0 0 12px rgba(77,110,245,0.15);
-  }
-
-  /* LOGOS */
-  .logos { padding: clamp(12px,1.5vw,18px) 0; border-bottom: 1px solid var(--border); overflow: hidden; }
-  .logos-track { display: flex; align-items: center; gap: 40px; width: max-content; animation: tick 24s linear infinite; }
-  .logos-track:hover { animation-play-state: paused; }
-  @keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-  @media (min-width: 900px) {
-    .logos-inner { max-width: 1100px; margin: 0 auto; }
-    .logos-track { animation: none; width: 100%; justify-content: space-around; gap: 0; }
-    .logos-track .dup { display: none; }
-  }
-  .pl { display: flex; align-items: center; flex-shrink: 0; filter: grayscale(1) invert(1) brightness(10); }
-  .pl img { height: 83px; width: auto; object-fit: contain; }
+  .vsl-thumb .play-btn { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4); }
+  .vsl-thumb .play-btn div { width: 68px; height: 68px; border-radius: 50%; background: var(--blue); display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 12px rgba(77,110,245,0.15); }
 
   /* CASE STUDY */
   .case { border-bottom: 1px solid var(--border); }
@@ -129,30 +99,6 @@ fbq('track', 'PageView');
   .case-num { background: var(--black); padding: 20px 16px; text-align: center; }
   .case-num-val { font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: clamp(20px,2vw,28px); color: var(--white); letter-spacing: -0.02em; line-height: 1; margin-bottom: 4px; }
   .case-num-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray); }
-
-  /* RESULTS */
-  .results { border-bottom: 1px solid var(--border); }
-  .results-top { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 1px; }
-  @media (max-width: 860px) { .results-top { grid-template-columns: repeat(2,1fr); } }
-  @media (max-width: 480px) { .results-top { grid-template-columns: 1fr; } }
-  .r-card { background: var(--black); padding: clamp(24px,3vw,36px); }
-  .r-num { font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: clamp(28px,3vw,40px); color: var(--white); letter-spacing: -0.02em; line-height: 1; margin-bottom: 12px; }
-  .r-quote { font-size: 15px; color: rgba(255,255,255,0.7); line-height: 1.65; margin-bottom: 16px; font-style: italic; }
-  .r-author { font-size: 12px; color: var(--gray); }
-  .r-author strong { color: rgba(255,255,255,0.6); font-weight: 600; }
-
-  /* CAROUSEL */
-  .carousel-track { display: flex; gap: 1px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; -webkit-overflow-scrolling: touch; scrollbar-width: none; border: 1px solid var(--border); border-top: none; border-radius: 0 0 8px 8px; overflow: hidden; }
-  .carousel-track::-webkit-scrollbar { display: none; }
-  .carousel-track .r-card { flex: 0 0 clamp(260px,35%,360px); scroll-snap-align: start; border-right: 1px solid var(--border); }
-  .carousel-track .r-card:last-child { border-right: none; }
-  @media (max-width: 540px) { .carousel-track .r-card { flex: 0 0 85vw; border-right: none; border-bottom: 1px solid var(--border); } }
-  .carousel-nav { display: flex; gap: 8px; }
-  .c-btn { width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--border); background: transparent; color: var(--white); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: border-color .18s, background .18s; }
-  .c-btn:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.05); }
-  .c-btn:disabled { opacity: 0.25; cursor: default; }
-  .c-btn svg { width: 16px; height: 16px; }
-  .results-cta-note { font-size: 12px; color: rgba(255,255,255,0.3); }
 
   /* FAQ */
   .faq { border-bottom: 1px solid var(--border); }
@@ -173,6 +119,8 @@ fbq('track', 'PageView');
   .final-sub { color: var(--gray); font-size: clamp(15px,1.4vw,18px); margin-bottom: 36px; }
   .final-note { font-size: 12px; color: rgba(255,255,255,0.2); margin-top: 10px; }
 
+  @media (max-width: 560px) { .hiw-step { grid-template-columns: 1fr !important; gap: 8px !important; } }
+
   /* FOOTER */
   footer { border-top: 1px solid var(--border); padding: 28px 0; }
   .foot-inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
@@ -188,10 +136,7 @@ fbq('track', 'PageView');
       <img src="https://shopfresko.com/cdn/shop/files/Untitled_design_4.png?v=1780554121&width=64" alt="The Last Lever" style="height:26px;width:auto;">
       <span>The Last Lever</span>
     </a>
-    <div style="display:flex;align-items:center;gap:16px;">
-      <a href="/testimonials.html" class="nav-reviews">Reviews</a>
-      <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="nav-btn" id="btn-nav">Book a call <span class="arr">→</span></a>
-    </div>
+    <a href="javascript:void(0)" onclick="document.getElementById('teardown').scrollIntoView({behavior:'smooth'})" class="nav-btn" id="btn-nav">Get my free CRO audit <span class="arr">→</span></a>
   </div>
 </header>
 
@@ -202,7 +147,7 @@ fbq('track', 'PageView');
     <div class="container">
       <p class="hero-tag">For DTC brands doing $250K+ a month</p>
       <h1>You want to <span style="text-decoration:underline;text-decoration-color:var(--blue);text-underline-offset:4px;">scale</span> spend but your <span style="color:var(--blue);">CAC</span> <span style="color:var(--blue);">keeps increasing.</span> The bottleneck is your store, and we'll prove it.</h1>
-      <p class="hero-sub">Watch the video below.</p>
+      <p class="hero-sub">Get your free CRO audit below.</p>
     </div>
   </section>
 
@@ -217,30 +162,15 @@ fbq('track', 'PageView');
           </div>
         </div>
       </div>
-      <div style="text-align:center;margin-top:32px;">
-        <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn-main" id="btn-vsl">Book a call <span class="arr">→</span></a>
-        <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-top:8px;">45 minutes. Free. No obligation.</p>
+      <div style="text-align:center;margin-top:32px;display:flex;flex-direction:column;align-items:center;gap:12px;">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+          <a href="javascript:void(0)" onclick="document.getElementById('teardown').scrollIntoView({behavior:'smooth'})" class="btn-main" id="btn-vsl">Get my free CRO audit ↓</a>
+          <a href="javascript:void(0)" onclick="document.getElementById('how-it-works').scrollIntoView({behavior:'smooth'})" class="btn-main" style="background:transparent;border:1.5px solid rgba(255,255,255,0.2);color:var(--white);">See how it works ↓</a>
+        </div>
+        <p style="font-size:12px;color:rgba(255,255,255,0.25);">Free recorded CRO audit. Sent within 48 hours.</p>
       </div>
     </div>
   </section>
-
-  <!-- LOGOS -->
-  <div class="logos">
-    <div class="logos-inner">
-      <div class="logos-track">
-        <div class="pl"><img src="https://shopfresko.com/cdn/shop/files/1_a62d33e7-02d7-4ffe-baf7-93efde1940a9.png?v=1780017516&width=3840" alt="Meta"></div>
-        <div class="pl"><img src="https://shopfresko.com/cdn/shop/files/2_a94fceda-0752-4b20-81b0-efa10afcb1e0.png?v=1780017516&width=3840" alt="Google"></div>
-        <div class="pl"><img src="https://shopfresko.com/cdn/shop/files/3_05e9da18-1d4e-4521-b08f-6d77440dc0e4.png?v=1780017516&width=3840" alt="TikTok"></div>
-        <div class="pl"><img src="https://shopfresko.com/cdn/shop/files/4_5cfb1845-fefe-4d08-a2eb-6cce23528816.png?v=1780017515&width=3840" alt="Pinterest"></div>
-        <div class="pl"><img src="https://shopfresko.com/cdn/shop/files/5_3784eb6a-5818-4bb3-a0ad-5268862a3e66.png?v=1780017684&width=3840" alt="Klaviyo"></div>
-        <div class="pl dup"><img src="https://shopfresko.com/cdn/shop/files/1_a62d33e7-02d7-4ffe-baf7-93efde1940a9.png?v=1780017516&width=3840" alt="Meta"></div>
-        <div class="pl dup"><img src="https://shopfresko.com/cdn/shop/files/2_a94fceda-0752-4b20-81b0-efa10afcb1e0.png?v=1780017516&width=3840" alt="Google"></div>
-        <div class="pl dup"><img src="https://shopfresko.com/cdn/shop/files/3_05e9da18-1d4e-4521-b08f-6d77440dc0e4.png?v=1780017516&width=3840" alt="TikTok"></div>
-        <div class="pl dup"><img src="https://shopfresko.com/cdn/shop/files/4_5cfb1845-fefe-4d08-a2eb-6cce23528816.png?v=1780017515&width=3840" alt="Pinterest"></div>
-        <div class="pl dup"><img src="https://shopfresko.com/cdn/shop/files/5_3784eb6a-5818-4bb3-a0ad-5268862a3e66.png?v=1780017684&width=3840" alt="Klaviyo"></div>
-      </div>
-    </div>
-  </div>
 
   <!-- CASE STUDY -->
   <section class="case section">
@@ -249,14 +179,13 @@ fbq('track', 'PageView');
         <div>
           <span class="case-tag">The playbook in action</span>
           <h2>$1.5M to $2M+/month. Same ads. 3 months.</h2>
-          <p class="case-body">Ozzi Gear is co-founder Peter's own brand. The same playbook we run for every client. No new ad spend — just a store that finally worked.</p>
+          <p class="case-body">Ozzi Gear is co-founder Peter's own brand. The same playbook we run for every client. No new ad spend just a store that finally worked.</p>
           <div class="case-nums">
             <div class="case-num"><div class="case-num-val">+25%</div><div class="case-num-label">Profit increase</div></div>
             <div class="case-num"><div class="case-num-val">+$100K</div><div class="case-num-label">Extra/month</div></div>
             <div class="case-num"><div class="case-num-val">$0</div><div class="case-num-label">Extra spend</div></div>
           </div>
         </div>
-        <!-- Ozzi Gear case study video -->
         <div style="border-radius:8px;overflow:hidden;">
           <div class="vsl-thumb" id="ozzi-wrap" onclick="this.innerHTML='<iframe src=\'https://player.vimeo.com/video/1198642793?autoplay=1&title=0&byline=0&portrait=0\' style=\'position:absolute;top:0;left:0;width:100%;height:100%;\' frameborder=\'0\' allow=\'autoplay;fullscreen;picture-in-picture\' allowfullscreen></iframe>'">
             <img src="https://shopfresko.com/cdn/shop/files/Ozzi_Gear_Chair_Beach_Days.webp?v=1779698848&width=3840" alt="Ozzi Gear" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
@@ -269,108 +198,157 @@ fbq('track', 'PageView');
     </div>
   </section>
 
-  <!-- RESULTS -->
-  <section class="results section">
+
+  <!-- FREE TEARDOWN OFFER -->
+  <section id="teardown" class="section" style="border-bottom:1px solid var(--border);">
     <div class="container">
-      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--blue-light);margin-bottom:16px;">Client results</p>
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:40px;">
-        <h2>What happens when the store works.</h2>
-        <a href="/testimonials.html" class="btn-main" style="font-size:14px;padding:12px 22px;">See all reviews →</a>
-      </div>
+      <span class="case-tag" style="display:block;margin-bottom:16px;">Start here — it's free</span>
+      <h2 style="max-width:20ch;margin-bottom:16px;">We'll find your three biggest profit leaks before you pay us a cent.</h2>
+      <p style="color:var(--gray);font-size:15px;line-height:1.75;max-width:60ch;margin-bottom:48px;">Send us your URL and within 48 hours we'll send back a full recorded CRO audit of your store. No call required. No pitch. Yours to keep whether you hire us or not.</p>
 
-      <div class="results-top">
-        <div class="r-card">
-          <p class="r-quote">"We were scaling ad spend but our profit wasn't moving. Every dollar we added just made our CAC worse. They found the leak, fixed the funnel, and added $37.5K to our monthly profit."</p>
-          <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
-            <div style="width:36px;height:36px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1px solid var(--border);"><img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.03.49_pm.png?v=1779762840&width=200" style="width:100%;height:100%;object-fit:cover;"></div>
-            <div><div style="font-size:13px;font-weight:700;color:var(--white);">Zaq Q.</div><div style="font-size:11px;color:var(--gray);">Lucky Bear & Co</div></div>
-          </div>
+      <div class="teardown-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:48px;">
+        <div style="background:var(--black);padding:28px 24px;">
+          <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:36px;color:var(--blue);letter-spacing:-0.02em;line-height:1;margin-bottom:16px;">1</div>
+          <h3 style="margin-bottom:10px;">Send us your store</h3>
+          <p style="color:var(--gray);font-size:14px;line-height:1.75;">Your store, your details, and your revenue range. Takes 30 seconds, no long questionnaire.</p>
         </div>
-        <div class="r-card">
-          <p class="r-quote">"Our store was doing decent revenue but profit wasn't keeping up. We'd tried fixing it ourselves and got nowhere. 22% profit increase from day one."</p>
-          <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
-            <div style="width:36px;height:36px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1px solid var(--border);"><img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.05.16_pm.png?v=1779762929&width=200" style="width:100%;height:100%;object-fit:cover;"></div>
-            <div><div style="font-size:13px;font-weight:700;color:var(--white);">Sean O.</div><div style="font-size:11px;color:var(--gray);">Auxx-Lift</div></div>
-          </div>
+        <div style="background:var(--black);padding:28px 24px;border-left:1px solid var(--border);border-right:1px solid var(--border);">
+          <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:36px;color:var(--blue);letter-spacing:-0.02em;line-height:1;margin-bottom:16px;">2</div>
+          <h3 style="margin-bottom:10px;">We run the audit</h3>
+          <p style="color:var(--gray);font-size:14px;line-height:1.75;">We screen-record your homepage, product pages, cart and checkout, and call out your three biggest profit leaks with the specific fix for each. Built for your store, not a template.</p>
         </div>
-        <div class="r-card">
-          <p class="r-quote">"They came in, did a full audit, found our weak points, and had new tests live within a week. 18% profit increase in 3 months. No extra ad spend."</p>
-          <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
-            <div style="width:36px;height:36px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1px solid var(--border);"><img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_11.56.34_am.png?v=1779762693&width=200" style="width:100%;height:100%;object-fit:cover;"></div>
-            <div><div style="font-size:13px;font-weight:700;color:var(--white);">Finn M.</div><div style="font-size:11px;color:var(--gray);">Knit and Carry</div></div>
-          </div>
-        </div>
-        <div class="r-card">
-          <p class="r-quote">"At $6M a year we expected better margins. They found where the profit was going. An extra $45K a month and we didn't touch a single ad."</p>
-          <div style="display:flex;align-items:center;gap:12px;margin-top:16px;">
-            <div style="width:36px;height:36px;border-radius:50%;overflow:hidden;flex-shrink:0;border:1px solid var(--border);"><img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.10.15_pm.png?v=1779763232&width=200" style="width:100%;height:100%;object-fit:cover;"></div>
-            <div><div style="font-size:13px;font-weight:700;color:var(--white);">Marcus L.</div><div style="font-size:11px;color:var(--gray);">Essential Sleep Hacks</div></div>
-          </div>
+        <div style="background:var(--black);padding:28px 24px;">
+          <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:36px;color:var(--blue);letter-spacing:-0.02em;line-height:1;margin-bottom:16px;">3</div>
+          <h3 style="margin-bottom:10px;">You get the video in 48 hours</h3>
+          <p style="color:var(--gray);font-size:14px;line-height:1.75;">An 8-minute recorded walkthrough lands in your inbox. Watch it, share it with your team, action it yourself, or book a call and we'll map the fixes live together.</p>
         </div>
       </div>
 
-      <div class="carousel-track" id="testiTrack">
-        <div class="r-card">
-          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_11.56.34_am.png?v=1779762693&width=3840" style="width:100%;border-radius:6px;aspect-ratio:16/7;object-fit:cover;margin-bottom:16px;">
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:6px;">The problem</p>
-          <p class="r-quote">"Revenue was growing but margins were flat. We knew something was off in the funnel but couldn't pinpoint it."</p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin:10px 0 6px;">The outcome</p>
-          <div class="r-num" style="font-size:clamp(22px,2.4vw,30px);">+18% profit</div>
-          <p class="r-author"><strong>Finn M.</strong> — CEO, Knit and Carry</p>
-        </div>
-        <div class="r-card">
-          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.07.33_pm.png?v=1779763064&width=3840" style="width:100%;border-radius:6px;aspect-ratio:16/7;object-fit:cover;margin-bottom:16px;">
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:6px;">The problem</p>
-          <p class="r-quote">"We had no idea where the gaps were. Our store looked fine but the numbers told a different story."</p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin:10px 0 6px;">What we did</p>
-          <p class="r-quote">"Full audit in week one. New tests live within days. The speed was unlike anything we'd seen before."</p>
-          <p class="r-author"><strong>Edward M.</strong> — Founder, Baby Knits</p>
-        </div>
-        <div class="r-card">
-          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.08.40_pm.png?v=1779763134&width=3840" style="width:100%;border-radius:6px;aspect-ratio:16/7;object-fit:cover;margin-bottom:16px;">
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:6px;">The problem</p>
-          <p class="r-quote">"Same traffic every month but profit wasn't scaling with it. We were leaving money on the table and didn't know how much."</p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin:10px 0 6px;">The outcome</p>
-          <div class="r-num" style="font-size:clamp(22px,2.4vw,30px);">+28% profit</div>
-          <p class="r-author"><strong>Grace N.</strong> — Founder, Underbrush Gum</p>
-        </div>
-        <div class="r-card">
-          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.10.15_pm.png?v=1779763232&width=3840" style="width:100%;border-radius:6px;aspect-ratio:16/7;object-fit:cover;margin-bottom:16px;">
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:6px;">The problem</p>
-          <p class="r-quote">"At $6M a year we expected better margins. Ad spend was high, CAC was high, and profit wasn't reflecting the revenue."</p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin:10px 0 6px;">The outcome</p>
-          <div class="r-num" style="font-size:clamp(22px,2.4vw,30px);">+$45K/mo</div>
-          <p class="r-author"><strong>Marcus L.</strong> — CEO, Essential Sleep Hacks</p>
-        </div>
-        <div class="r-card">
-          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.11.09_pm.png?v=1779763277&width=3840" style="width:100%;border-radius:6px;aspect-ratio:16/7;object-fit:cover;margin-bottom:16px;">
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:6px;">The problem</p>
-          <p class="r-quote">"We were scaling spend quarter on quarter but the bottom line wasn't moving. Classic case of more revenue, same profit."</p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin:10px 0 6px;">The outcome</p>
-          <div class="r-num" style="font-size:clamp(22px,2.4vw,30px);">+24% profit</div>
-          <p class="r-author"><strong>Dana R.</strong> — Co-founder, Spotminders</p>
-        </div>
-        <div class="r-card">
-          <img src="https://shopfresko.com/cdn/shop/files/Screenshot_2026-05-26_at_12.13.51_pm.png?v=1779763444&width=3840" style="width:100%;border-radius:6px;aspect-ratio:16/7;object-fit:cover;margin-bottom:16px;">
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:6px;">The problem</p>
-          <p class="r-quote">"At $4M a year we were barely profitable. Revenue looked great on paper but the margins were paper thin."</p>
-          <p style="font-size:13px;color:rgba(255,255,255,0.5);margin:10px 0 6px;">The outcome</p>
-          <p class="r-quote">"Went from scraping by to genuinely profitable. Game changer."</p>
-          <p class="r-author"><strong>Theo W.</strong> — Founder, HaloSphere</p>
-        </div>
+      <div id="teardown-intro">
+        <p style="font-size:15px;color:var(--white);font-weight:600;margin-bottom:6px;">Take this <span style="color:var(--blue);text-decoration:underline;text-underline-offset:3px;">30-second</span> form and get a full recorded CRO audit of your store.</p>
+        <p style="font-size:13px;color:var(--gray);margin-bottom:28px;">We'll record an 8-minute walkthrough of your actual site and send it to your inbox within 48 hours.</p>
       </div>
 
-      <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:32px;">
-        <div class="carousel-nav">
-          <button class="c-btn" id="testiPrev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
-          <button class="c-btn" id="testiNext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
+      <form id="teardown-form" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:640px;" onsubmit="submitTeardown(event)">
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);">Store URL</label>
+          <input type="text" name="store_url" placeholder="yourstore.com" required style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;padding:12px 14px;color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color .18s;" onfocus="this.style.borderColor='rgba(77,110,245,0.6)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'">
         </div>
-        <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px;">
-          <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn-main" id="btn-results">Book a call <span class="arr">→</span></a>
-          <p class="results-cta-note">45 minutes. Free. No obligation.</p>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);">Your Name</label>
+          <input type="text" name="name" placeholder="First name" required style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;padding:12px 14px;color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color .18s;" onfocus="this.style.borderColor='rgba(77,110,245,0.6)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'">
         </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);">Email</label>
+          <input type="email" name="email" placeholder="you@brand.com" required style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;padding:12px 14px;color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color .18s;" onfocus="this.style.borderColor='rgba(77,110,245,0.6)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);">Phone <span style="font-size:10px;font-weight:400;text-transform:none;letter-spacing:0;color:rgba(255,255,255,0.3);">So we can text you the moment it's ready.</span></label>
+          <input type="tel" name="phone" placeholder="+61 400 000 000" style="background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:6px;padding:12px 14px;color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color .18s;" onfocus="this.style.borderColor='rgba(77,110,245,0.6)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px;">
+          <label style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);">Monthly revenue</label>
+          <select name="revenue" required style="background:#1a1a1a;border:1px solid var(--border);border-radius:6px;padding:12px 14px;color:var(--white);font-family:'Inter',sans-serif;font-size:15px;outline:none;transition:border-color .18s;-webkit-appearance:none;" onfocus="this.style.borderColor='rgba(77,110,245,0.6)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'">
+            <option value="" disabled selected style="color:rgba(255,255,255,0.3);">Select range</option>
+            <option value="$250K-$500K">$250K - $500K/mo</option>
+            <option value="$500K-$750K">$500K - $750K/mo</option>
+            <option value="$750K-$1M">$750K - $1M/mo</option>
+            <option value="$1M-$1.5M">$1M - $1.5M/mo</option>
+            <option value="$1.5M-$2M">$1.5M - $2M/mo</option>
+            <option value="$2M-$3M">$2M - $3M/mo</option>
+            <option value="$3M-$5M">$3M - $5M/mo</option>
+            <option value="$5M+">$5M+/mo</option>
+          </select>
+        </div>
+        <div style="display:flex;align-items:flex-end;">
+          <button type="submit" class="btn-main" id="btn-teardown" style="width:100%;justify-content:center;">Get my free CRO audit <span class="arr">→</span></button>
+        </div>
+      </form>
+
+      <div id="teardown-success" style="display:none;padding:32px;background:rgba(77,110,245,0.1);border:1px solid rgba(77,110,245,0.3);border-radius:8px;max-width:640px;margin-top:16px;">
+        <p style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(18px,2vw,24px);color:var(--white);margin-bottom:12px;">Perfect — your CRO audit's on the way.</p>
+        <p style="font-size:15px;color:var(--gray);line-height:1.7;margin-bottom:24px;">We'll have the full breakdown back to you within 48 hours. Last step: lock in your call now and we'll walk you through every leak we find, live. Nothing to prepare — we do the work before we talk.</p>
+        <a id="booking-btn" href="https://calendly.com/admin-thelastlever/strategy-call" target="_blank" rel="noopener" class="btn-main" onclick="if(typeof gtag==='function')gtag('event','booking_click');if(typeof fbq==='function')fbq('trackCustom','BookingClick');">Book my call <span class="arr">→</span></a>
+        <p style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:10px;">Can't make it? You'll still get the recorded CRO audit either way.</p>
       </div>
-      <style>@media(max-width:480px){.results-cta{align-items:center!important;}}</style>
+
+      <p style="font-size:12px;color:rgba(255,255,255,0.25);margin-top:16px;max-width:54ch;">For brands doing $250K+/month only. Every CRO audit is genuine and built for your store, not a form letter. <span style="color:rgba(255,255,255,0.3);">Prefer to talk first?</span> <a href="https://calendly.com/admin-thelastlever/strategy-call" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Book a call →</a></p>
+
+      <style>
+        @media(max-width:560px){#teardown-form{grid-template-columns:1fr!important;}}
+        input::placeholder,select::placeholder{color:rgba(255,255,255,0.25);}
+        option{background:#1a1a1a;color:#fff;}
+      </style>
+    </div>
+  </section>
+  <style>@media(max-width:640px){.teardown-grid{grid-template-columns:1fr!important;}}</style>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="section" style="border-bottom: 1px solid var(--border);">
+    <div class="container">
+      <p style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.14em;color:var(--gray);margin-bottom:16px;">The process</p>
+      <h2 style="margin-bottom:12px;">From first call to first win in under three weeks.</h2>
+      <p style="color:var(--gray);font-size:15px;line-height:1.65;margin-bottom:44px;">Once you're a client, here's what the first three weeks look like.</p>
+
+      <div style="display:flex;flex-direction:column;gap:0;">
+
+        <!-- Step 1 -->
+        <div class="hiw-step" style="display:grid;grid-template-columns:140px 1fr;gap:32px;padding:32px 0;border-top:1px solid var(--border);align-items:start;">
+          <div>
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(28px,3vw,40px);color:var(--white);letter-spacing:-0.02em;line-height:1;">Days 1–3</div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);margin-top:6px;">Onboarding</div>
+          </div>
+          <div>
+            <h3 style="margin-bottom:10px;">We get inside your brand before we touch anything.</h3>
+            <p style="color:var(--gray);font-size:15px;line-height:1.75;">Full onboarding and setup. We get everything connected analytics, ads, Shopify access and go deep on your brand, your customers, and your numbers. By day three you'll receive an executive summary of everything we've learned about your brand. If anything's off, we fix it before we build anything.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="hiw-step" style="display:grid;grid-template-columns:140px 1fr;gap:32px;padding:32px 0;border-top:1px solid var(--border);align-items:start;">
+          <div>
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(28px,3vw,40px);color:var(--white);letter-spacing:-0.02em;line-height:1;">Week 2</div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);margin-top:6px;">First Build</div>
+          </div>
+          <div>
+            <h3 style="margin-bottom:10px;">Your first actions, ready for review.</h3>
+            <p style="color:var(--gray);font-size:15px;line-height:1.75;">By the end of week two, the first actions based on your audit and what we agreed on in the strategy call are ready for your review. You see exactly what we're building and why before anything goes live.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="hiw-step" style="display:grid;grid-template-columns:140px 1fr;gap:32px;padding:32px 0;border-top:1px solid var(--border);align-items:start;">
+          <div>
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(28px,3vw,40px);color:var(--white);letter-spacing:-0.02em;line-height:1;">Week 3</div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);margin-top:6px;">First Tests Live</div>
+          </div>
+          <div>
+            <h3 style="margin-bottom:10px;">Tests are live. The data starts coming in.</h3>
+            <p style="color:var(--gray);font-size:15px;line-height:1.75;">Week three, the first tests go live. We're running structured A/B tests against your current store methodical, tracked, and built to win. With a 60% test win rate, most brands see their first winning test here.</p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="hiw-step" style="display:grid;grid-template-columns:140px 1fr;gap:32px;padding:32px 0;border-top:1px solid var(--border);align-items:start;">
+          <div>
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(28px,3vw,40px);color:var(--white);letter-spacing:-0.02em;line-height:1;">Ongoing</div>
+            <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--gray);margin-top:6px;">Compound</div>
+          </div>
+          <div>
+            <h3 style="margin-bottom:10px;">Weekly calls. Continuous iteration. Gains that stack.</h3>
+            <p style="color:var(--gray);font-size:15px;line-height:1.75;">Weekly calls to review results, align on priorities, and plan the next sprint. We go deeper into the brand every week finding new levers, improving what's already working, and compounding the gains. Every winner stays live. Every iteration builds on the last.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:48px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;">
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+          <a href="https://calendly.com/admin-thelastlever/strategy-call" target="_blank" rel="noopener" class="btn-main">Book a call <span class="arr">→</span></a>
+          <a href="javascript:void(0)" onclick="document.getElementById('vsl-wrap').scrollIntoView({behavior:'smooth'})" class="btn-main" style="background:transparent;border:1.5px solid rgba(255,255,255,0.2);color:var(--white);">Watch the VSL ↑</a>
+        </div>
+        <p style="font-size:12px;color:rgba(255,255,255,0.25);">45 minutes. Free. No obligation.</p>
+      </div>
     </div>
   </section>
 
@@ -391,21 +369,21 @@ fbq('track', 'PageView');
             <span class="faq-q">Our ads are working well. Do we really need this?</span>
             <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
           </button>
-          <div class="faq-body" id="f2"><p>Good — keep spending. But if your store converts at 3% and we get it to 4%, that's a 33% revenue increase from the exact same budget. The best operators never stop optimising.</p></div>
+          <div class="faq-body" id="f2"><p>Good keep spending. But if your store converts at 3% and we get it to 4%, that's a 33% revenue increase from the exact same budget. The best operators never stop optimising.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-btn" aria-expanded="false" aria-controls="f3">
             <span class="faq-q">How quickly do we see results?</span>
             <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
           </button>
-          <div class="faq-body" id="f3"><p>Most brands see meaningful uplift within 90 days. With a 60% test win rate and every winner staying live, gains compound fast.</p></div>
+          <div class="faq-body" id="f3"><p>First tests go live in about three weeks. Meaningful, compounding uplift typically lands within 90 days — with a 60% test win rate and every winner staying live, gains stack from there.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-btn" aria-expanded="false" aria-controls="f4">
-            <span class="faq-q">What does the free audit involve?</span>
+            <span class="faq-q">What's the free CRO audit?</span>
             <span class="faq-icon"><svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span>
           </button>
-          <div class="faq-body" id="f4"><p>A 45-minute call where we walk through your store, identify conversion gaps, AOV leakage, and checkout friction — and give you the three highest-impact changes you could make right now. Specific, actionable, no obligation.</p></div>
+          <div class="faq-body" id="f4"><p>You send your store; within 48 hours we send back a recorded 8-minute walkthrough of your actual site showing your three biggest profit leaks and the specific fix for each. No call required. If you want, book a call and we'll go through it live.</p></div>
         </div>
       </div>
     </div>
@@ -414,9 +392,9 @@ fbq('track', 'PageView');
   <!-- FINAL CTA -->
   <section class="final section">
     <div class="container">
-      <h2>Find out exactly where your profit is going.</h2>
-      <p class="final-sub">45 minutes. A full breakdown. Whether you work with us or not, you leave with a roadmap.</p>
-      <a href="https://calendly.com/admin-thelastlever/45min-strategy-call" target="_blank" rel="noopener" class="btn-main" id="btn-final">Book a call <span class="arr">→</span></a>
+      <h2>See where your profit is leaking — free.</h2>
+      <p class="final-sub">Send your store and get a recorded CRO audit within 48 hours. Yours to keep whether you work with us or not.</p>
+      <a href="javascript:void(0)" onclick="document.getElementById('teardown').scrollIntoView({behavior:'smooth'})" class="btn-main" id="btn-final">Get my free teardown <span class="arr">→</span></a>
       <p class="final-note">Free. No obligation. No pitch deck.</p>
     </div>
   </section>
@@ -429,24 +407,66 @@ fbq('track', 'PageView');
       <img src="https://shopfresko.com/cdn/shop/files/Untitled_design_4.png?v=1780554121&width=64" alt="The Last Lever" style="height:24px;width:auto;opacity:0.5;">
       <span style="opacity:0.5;">The Last Lever</span>
     </div>
-    <p class="foot-copy">©2026 The Last Lever. All rights reserved.</p>
+    <p class="foot-copy">©2026 The Last Lever. All rights reserved. <a href="/privacy.html" style="color:rgba(255,255,255,0.25);text-decoration:underline;margin-left:16px;">Privacy Policy</a></p>
   </div>
 </footer>
 
 <script>
-  // TRACKING
+  // TEARDOWN FORM
+  function submitTeardown(e) {
+    e.preventDefault();
+    var form = document.getElementById('teardown-form');
+    var btn = form.querySelector('button[type="submit"]');
+    var data = {
+      store_url: form.store_url.value,
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      revenue: form.revenue.value,
+      submitted_at: new Date().toISOString()
+    };
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    // Use no-cors mode to avoid CORS issues with Apps Script
+    fetch('https://script.google.com/macros/s/AKfycbwp3l-O9zILUzQq2btP5JmNAwFfGeiUf5rH3W8dj1m-dQcAWwqYVOPbs1t_o5T8bnk4uQ/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    })
+    .then(function() {
+      var cal = "https://calendly.com/admin-thelastlever/strategy-call"
+        + "?name=" + encodeURIComponent(data.name)
+        + "&email=" + encodeURIComponent(data.email)
+        + "&a1=" + encodeURIComponent(data.store_url);
+      document.getElementById('booking-btn').href = cal;
+      form.style.display = 'none';
+      document.getElementById('teardown-intro').style.display = 'none';
+      document.getElementById('teardown-success').style.display = 'block';
+      if(typeof gtag==='function') gtag('event','teardown_form_submit');
+      if(typeof fbq==='function') fbq('trackCustom','TeardownFormSubmit');
+    })
+    .catch(function() {
+      var cal = "https://calendly.com/admin-thelastlever/strategy-call";
+      document.getElementById('booking-btn').href = cal;
+      form.style.display = 'none';
+      document.getElementById('teardown-intro').style.display = 'none';
+      document.getElementById('teardown-success').style.display = 'block';
+    });
+  }
+
   (function(){
-    [{id:'btn-nav',l:'Nav'},{id:'btn-vsl',l:'VSL'},{id:'btn-results',l:'Results'},{id:'btn-final',l:'Final CTA'}].forEach(function(b){
+    [{id:'btn-nav',l:'Nav'},{id:'btn-vsl',l:'VSL'},{id:'btn-teardown',l:'Teardown'},{id:'btn-final',l:'Final CTA'}].forEach(function(b){
       var el=document.getElementById(b.id);
       if(!el) return;
       el.addEventListener('click',function(){
-        if(typeof gtag==='function') gtag('event','book_a_call_click',{button_location:b.l});
-        if(typeof fbq==='function') fbq('trackCustom','BookACallClick',{button_location:b.l});
+        if(typeof gtag==='function') gtag('event','teardown_cta_click',{button_location:b.l});
+        if(typeof fbq==='function') fbq('trackCustom','TeardownCtaClick',{button_location:b.l});
       });
     });
   })();
 
-  // FAQ
   (function(){
     document.querySelectorAll('.faq-btn').forEach(function(btn){
       btn.addEventListener('click',function(){
@@ -463,20 +483,6 @@ fbq('track', 'PageView');
         }
       });
     });
-  })();
-
-  // CAROUSEL
-  (function(){
-    var track=document.getElementById('testiTrack');
-    var prev=document.getElementById('testiPrev');
-    var next=document.getElementById('testiNext');
-    if(!track||!prev||!next) return;
-    function step(){ var c=track.querySelector('.r-card'); return c?c.getBoundingClientRect().width+1:300; }
-    function upd(){ prev.disabled=track.scrollLeft<=0; next.disabled=track.scrollLeft>=track.scrollWidth-track.clientWidth-1; }
-    prev.addEventListener('click',function(){track.scrollBy({left:-step(),behavior:'smooth'});});
-    next.addEventListener('click',function(){track.scrollBy({left:step(),behavior:'smooth'});});
-    track.addEventListener('scroll',upd,{passive:true});
-    upd();
   })();
 </script>
 </body>
